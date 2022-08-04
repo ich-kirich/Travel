@@ -2,16 +2,58 @@ html, body {
     width: 100%;
     height: 100%;
     margin: 0 auto;
-    padding: 0 auto;
     min-width: 1440px;
 }
 header {
     position: relative;
+    z-index: 50;
     height: 41px;
     padding: 25px 0 24px;
-    z-index: 50;
     background: rgba(242, 120, 92, 0.7);
     box-shadow: 0px 4px 4px rgb(13 96 111 / 50%);
+}
+header .container {
+    display: flex;
+    flex-direction: row;
+}
+header .container .logo {
+    margin: 0 156px 0 377px;
+    font-family: 'Magra', sans-serif;
+    font-size: 31px;
+    color: #fff;
+    text-align: center;
+}
+header .container nav ul {
+    padding: 0;
+    margin-top: 10px;
+}
+header .container nav ul li {
+    display: inline;
+    margin-right: 42px;
+}
+header .container nav ul li a{
+    text-decoration: none;
+    font-family: 'Red Hat Text', sans-serif;
+    color: #fff;
+}
+header .container .login {
+    margin-left: 154px;
+    height: 41px;
+}
+header .container .login button {
+    width: 103px;
+    height: 41px;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Red Hat Text', sans-serif;
+    background-color: #0D606F;
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16);
 }
 #preview {
     position: absolute;
