@@ -58,22 +58,20 @@ header .container nav ul li a{
     line-height: 21px;
     letter-spacing: 0em;
     text-align: left;
-    color: #fff;
 }
 header .container .login button {
+    padding: 10px 30px;
     color: #fff;
+    font-family: 'Red Hat Text', sans-serif;
     box-sizing: border-box;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16);
     font-size: 16px;
     font-weight: 500;
     line-height: 21px;
-    padding: 10px 30px;
     border: none;
     outline: none;
     background: #0D606F;
     border-radius: 10px;
-    font-family: 'Red Hat Text', sans-serif;
-    color: #fff;
 }
 #preview {
     position: absolute;
@@ -122,15 +120,15 @@ header .container .login button {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    width: 892px;
     background: rgba(255, 255, 255, 0.7);
     border-radius: 16px;
-    width: 892px;
-
 }
 
 #preview .container .preview-inner .search-field input[type="text"]{
     width: 646px;
     height: 95px;
+    padding: 0 0 0 41px;
     border: none;
     background: none;
     font-family: 'Aleo', sans-serif;
@@ -139,7 +137,6 @@ header .container .login button {
     font-size: 24px;
     line-height: 29px;
     color: #F2785C;
-    padding: 0 0 0 41px;
 }
 
 #preview .container .preview-inner .search-field input::placeholder {
@@ -156,6 +153,7 @@ header .container .login button {
     margin-right: 18px;
     width: 228px;
     height: 59px;
+    box-sizing: border-box;
     border: none;
     border-radius: 10px;
     font-family: 'Red Hat Text', sans-serif;
@@ -165,6 +163,5 @@ header .container .login button {
     font-weight: 500;
     font-size: 24px;
     line-height: 32px;
-    box-sizing: border-box;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16);
 }
