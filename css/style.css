@@ -4,6 +4,13 @@ html, body {
     margin: 0 auto;
     min-width: 1440px;
 }
+
+.container {
+    margin: 0 auto;
+    width: 1200px;
+    padding: 0 120px;
+}
+
 header {
     position: relative;
     z-index: 50;
@@ -14,46 +21,59 @@ header {
 }
 header .container {
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
 }
+
 header .container .logo {
-    margin: 0 156px 0 377px;
     font-family: 'Magra', sans-serif;
-    font-size: 31px;
     color: #fff;
-    text-align: center;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 39px;
+    letter-spacing: 0em;
 }
+
+header .container nav {
+    margin: 10px 0 0 -31px;
+}
+
 header .container nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 42px;
+    margin: 0;
     padding: 0;
-    margin-top: 10px;
+    list-style: none;
 }
 header .container nav ul li {
-    display: inline;
-    margin-right: 42px;
+    display: list-item;
 }
 header .container nav ul li a{
     text-decoration: none;
     font-family: 'Red Hat Text', sans-serif;
     color: #fff;
-}
-header .container .login {
-    margin-left: 154px;
-    height: 41px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #fff;
 }
 header .container .login button {
-    width: 103px;
-    height: 41px;
-    padding: 10px 30px;
-    border: none;
-    border-radius: 10px;
-    font-family: 'Red Hat Text', sans-serif;
-    background-color: #0D606F;
     color: #fff;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 21px;
     box-sizing: border-box;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 21px;
+    padding: 10px 30px;
+    border: none;
+    outline: none;
+    background: #0D606F;
+    border-radius: 10px;
+    font-family: 'Red Hat Text', sans-serif;
+    color: #fff;
 }
 #preview {
     position: absolute;
@@ -62,12 +82,89 @@ header .container .login button {
     left: 0;
     display: flex;
     justify-content: center;
+    margin-bottom: 80px;
 }
+
 #preview .container {
     min-height: 765px;
-    width: 1440px;
     background: url(../img/preview-back.jpg);
     background-repeat: no-repeat;
     background-position: 0 center;
     background-size: auto 100%;
+}
+#preview .container .preview-inner {
+    position: relative;
+    width: 892px;
+    padding-top: 122px;
+}
+#preview .container .preview-inner h1 {
+    margin: 0 auto;
+    font-family: 'Aleo', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 96px;
+    color: #FFFFFF;
+}
+#preview .container .preview-inner p {
+    margin-top: 32px;
+    margin-bottom: 46px;
+    font-family: 'Aleo', sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+#preview .container .preview-inner .search-field{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 16px;
+    width: 892px;
+
+}
+
+#preview .container .preview-inner .search-field input[type="text"]{
+    width: 646px;
+    height: 95px;
+    border: none;
+    background: none;
+    font-family: 'Aleo', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: #F2785C;
+    padding: 0 0 0 41px;
+}
+
+#preview .container .preview-inner .search-field input::placeholder {
+    width: 100%;
+    font-family: 'Aleo', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: #F2785C;
+}
+
+#preview .container .preview-inner .search-field button {
+    margin-right: 18px;
+    width: 228px;
+    height: 59px;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Red Hat Text', sans-serif;
+    font-style: normal;
+    background-color: #0D606F;
+    color: #fff;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16);
 }
