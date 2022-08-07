@@ -262,18 +262,18 @@ main {
 }
 
 #destinations .destinations-pictures {
+    padding-bottom: 20px;
+    margin-top: 6px;
     display: flex;
     justify-content: flex-start;
     list-style: none;
-    padding-bottom: 20px;
-    margin-top: 6px;
 }
 #destinations .destinations-pictures .pictures {
-    overflow: hidden;
     position: relative;
+    margin: 0 30px;
+    overflow: hidden;
     border-radius: 16px;
     line-height: 0em;
-    margin: 0 30px;
     flex: 1 0 800px;
 }
 
@@ -296,27 +296,28 @@ main {
     justify-content: center;
 }
 #destinations .pagination .point-no-choose {
-    border-radius: 50%;
     width: 20px;
     height: 20px;
     background: rgba(242, 120, 92, 0.5);
+    border-radius: 50%;
 }
 
 #destinations .pagination .point-choose {
-    border-radius: 50%;
     width: 20px;
     height: 20px;
     background: #F2785C;
+    border-radius: 50%;
 }
 
 #destinations .find-more button{
+    margin: 40px auto 80px;
+    padding: 14px 33px 13px 81px;
     border: none;
     outline: none;
     background: #0D606F;
     border-radius: 10px;
     font-family: 'Red Hat Text', sans-serif;
     color: #fff;
-    padding: 14px 33px 13px 81px;
     font-weight: 500;
     font-size: 24px;
     line-height: 32px;
@@ -324,5 +325,4 @@ main {
     background-repeat: no-repeat;
     background-position: 35px center;
     background-size: 35px 22px;
-    margin: 40px auto 80px;
 }
