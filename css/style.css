@@ -165,3 +165,73 @@ header .container .login button {
     line-height: 32px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16);
 }
+
+#steps {
+    position: absolute;
+    top: 845px;
+    right: 0;
+    left: 0;
+}
+
+#steps .container h2 {
+    font-family: 'Red Hat Text', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 53px;
+    color: #F2785C;
+    text-align: center;
+    margin: 0 0 40px;
+}
+
+#steps .container .list-steps {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px 97px;
+}
+
+#steps .container .list-steps .step img {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 30px;
+    background: #F2785C;
+    border-radius: 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#steps .container .list-steps .step p {
+    color: #0D606F;
+    font-family: 'Aleo', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0;
+    text-align: center;
+}
+
+#steps .container .list-steps .step .icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 30px;
+    background: #F2785C;
+    border-radius: 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#steps .container .list-steps .step .bike {
+    background-image: url(../img/step_first.svg);
+}
+
+#steps .container .list-steps .step .calendar {
+    background-image: url(../img/step_second.svg);
+}
+
+#steps .container .list-steps .step .plane {
+    background-image: url(../img/step_third.svg);
+}
+
+#steps .container .list-steps .step:nth-child(2) {
+    margin-left: 70px;
+}
