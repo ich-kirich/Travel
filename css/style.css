@@ -1,6 +1,9 @@
+* {
+    box-sizing: border-box;
+  }
+
 html, body {
     width: 100%;
-    height: 100%;
     margin: 0 auto;
     min-width: 1440px;
 }
@@ -14,7 +17,6 @@ html, body {
 header {
     position: relative;
     z-index: 50;
-    height: 41px;
     padding: 25px 0 24px;
     background: rgba(242, 120, 92, 0.7);
     box-shadow: 0px 4px 4px rgb(13 96 111 / 50%);
@@ -73,11 +75,14 @@ header .container .login button {
     background: #0D606F;
     border-radius: 10px;
 }
+
+main {
+    clear: both;
+    height: 100%;
+}
+
 #preview {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
+    margin-top: -90px; 
     display: flex;
     justify-content: center;
     margin-bottom: 80px;
@@ -91,7 +96,6 @@ header .container .login button {
     background-size: auto 100%;
 }
 #preview .container .preview-inner {
-    position: relative;
     width: 892px;
     padding-top: 122px;
 }
@@ -167,13 +171,10 @@ header .container .login button {
 }
 
 #steps {
-    position: absolute;
-    top: 845px;
-    right: 0;
-    left: 0;
+    margin-bottom: 97px;
 }
 
-#steps .container h2 {
+#steps .container-steps h2 {
     margin: 0 0 40px;
     font-family: 'Red Hat Text', sans-serif;
     font-style: normal;
@@ -184,13 +185,18 @@ header .container .login button {
     text-align: center;
 }
 
-#steps .container .list-steps {
+#steps .container-steps {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+#steps .container-steps .list-steps {
     display: flex;
     justify-content: space-between;
     margin: 0 10px 97px;
 }
 
-#steps .container .list-steps .step img {
+#steps .container-steps .list-steps .step img {
     width: 100px;
     height: 100px;
     margin: 0 auto 30px;
@@ -200,7 +206,7 @@ header .container .login button {
     background-repeat: no-repeat;
 }
 
-#steps .container .list-steps .step p {
+#steps .container-steps .list-steps .step p {
     margin: 0;
     color: #0D606F;
     font-family: 'Aleo', sans-serif;
@@ -210,7 +216,7 @@ header .container .login button {
     text-align: center;
 }
 
-#steps .container .list-steps .step .icon {
+#steps .container-steps .list-steps .step .icon {
     width: 100px;
     height: 100px;
     margin: 0 auto 30px;
@@ -220,18 +226,103 @@ header .container .login button {
     background-repeat: no-repeat;
 }
 
-#steps .container .list-steps .step .bike {
+#steps .container-steps .list-steps .step .bike {
     background-image: url(../img/step_first.svg);
 }
 
-#steps .container .list-steps .step .calendar {
+#steps .container-steps .list-steps .step .calendar {
     background-image: url(../img/step_second.svg);
 }
 
-#steps .container .list-steps .step .plane {
+#steps .container-steps .list-steps .step .plane {
     background-image: url(../img/step_third.svg);
 }
 
-#steps .container .list-steps .step:nth-child(2) {
+#steps .container-steps .list-steps .step:nth-child(2) {
     margin-left: 70px;
+}
+
+#destinations h2 {
+    margin: 0 0 40px;
+    font-family: 'Red Hat Text', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 53px;
+    color: #F2785C;
+    text-align: center;
+}
+
+#destinations {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+#destinations .destinations-pictures {
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+    padding-bottom: 20px;
+    margin-top: 6px;
+}
+#destinations .destinations-pictures .pictures {
+    overflow: hidden;
+    position: relative;
+    border-radius: 16px;
+    line-height: 0em;
+    margin: 0 30px;
+    flex: 1 0 800px;
+}
+
+#destinations .destinations-pictures .pictures span {
+    position: absolute;
+    left: 15px;
+    bottom: 40px;
+    font-family: 'Red Hat Text', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 42px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+#destinations .pagination {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+#destinations .pagination .point-no-choose {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background: rgba(242, 120, 92, 0.5);
+}
+
+#destinations .pagination .point-choose {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background: #F2785C;
+}
+
+#destinations .find-more button{
+    border: none;
+    outline: none;
+    background: #0D606F;
+    border-radius: 10px;
+    font-family: 'Red Hat Text', sans-serif;
+    color: #fff;
+    padding: 14px 33px 13px 81px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    background-image: url(../img/arrow.svg);
+    background-repeat: no-repeat;
+    background-position: 35px center;
+    background-size: 35px 22px;
+    margin: 40px auto 80px;
 }
