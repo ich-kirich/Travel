@@ -3,8 +3,8 @@
   }
 
 html, body {
-    width: 100%;
     margin: 0 auto;
+    width: 100%;
     min-width: 1440px;
 }
 
@@ -65,11 +65,11 @@ header .container nav {
 }
 
 header nav ul {
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: space-evenly;
     gap: 42px;
-    margin: 0;
-    padding: 0;
     list-style: none;
 }
 header ul li {
@@ -130,8 +130,8 @@ main {
     background-size: auto 100%;
 }
 #preview .preview-inner {
-    width: 892px;
     padding-top: 122px;
+    width: 892px;
 }
 #preview .preview-inner h1 {
     margin: 0 auto;
@@ -164,9 +164,9 @@ main {
 }
 
 #preview .search-field input[type="text"]{
+    padding: 0 0 0 41px;
     width: 646px;
     height: 95px;
-    padding: 0 0 0 41px;
     border: none;
     background: none;
     outline: none;
@@ -232,9 +232,9 @@ main {
 }
 
 #steps .container-steps .list-steps {
+    margin: 0 10px 97px;
     display: flex;
     justify-content: space-between;
-    margin: 0 10px 97px;
 }
 
 #steps .step img {
@@ -373,11 +373,11 @@ main {
 }
 
 #stories .stories-list .stories {
+    padding: 0 0 61px;
+    margin-bottom: -61px;
     background: url(../img/background-stories-list.jpg);
     background-repeat: no-repeat;
     background-position: top center;
-    padding: 0 0 61px;
-    margin-bottom: -61px;
 }
 
 #stories .stories .list {
@@ -389,9 +389,9 @@ main {
 }
 
 #stories .container .story {
+    margin-bottom: 30px;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 30px;
 }
 
 #stories .story .text {
@@ -461,13 +461,13 @@ main {
 }
 
 #stories .text p {
+    margin-top: 24px;
+    margin-bottom: 0px;
     font-family: 'Aleo', sans-serif;
     font-size: 20px;
     font-weight: 400;
     line-height: 24px;
     color: #0D606F;
-    margin-top: 24px;
-    margin-bottom: 0px;
 }
 
 #stories .text a {
@@ -515,8 +515,8 @@ footer .container ul img:hover{
 }
 
 footer p {
-    text-align: center;
     margin: 2px 0 0;
+    text-align: center;
     font-family: 'Red Hat Text', sans-serif;
     font-style: normal;
     font-weight: 500;
@@ -528,10 +528,10 @@ footer p {
 footer ul {
     margin: 0;
     padding: 0;
-    list-style: none;
     display: flex;
     justify-content: space-evenly;
     gap: 24px;
+    list-style: none;
 }
 
 footer .youtube {
