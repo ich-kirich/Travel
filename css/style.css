@@ -30,7 +30,13 @@ html, body {
     background-repeat: no-repeat;
     background-position: 35px center;
     background-size: 35px 22px;
-} 
+    cursor: pointer;
+    transition: background-color 1.5s;
+}
+
+button:hover{
+    background-color: #05262c ;
+}
 
 header {
     position: relative;
@@ -78,6 +84,12 @@ header li a{
     line-height: 21px;
     letter-spacing: 0em;
     text-align: left;
+    transition: 1s;
+    cursor: pointer;
+}
+header li a:hover {
+    color: #36b279;    
+    transition: all .3s linear;
 }
 header .login button {
     padding: 10px 30px;
@@ -92,6 +104,12 @@ header .login button {
     outline: none;
     background: #0D606F;
     border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 1.5s;
+}
+
+header .login button:hover{
+    background-color: #05262c ;
 }
 
 main {
@@ -151,6 +169,7 @@ main {
     padding: 0 0 0 41px;
     border: none;
     background: none;
+    outline: none;
     font-family: 'Aleo', sans-serif;
     font-style: italic;
     font-weight: 400;
@@ -184,6 +203,12 @@ main {
     font-size: 24px;
     line-height: 32px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    cursor: pointer;
+    transition: background-color 1.5s;
+}
+
+#preview .search-field button:hover{
+    background-color: #05262c ;
 }
 
 #steps {
@@ -450,6 +475,12 @@ main {
     font-size: 20px;
     font-weight: 700;
     color: #0D606F;
+    cursor: pointer;
+    transition: color .5s linear;
+}
+
+#stories .text a:hover{
+    color: #ac2e25 ;
 }
 
 #stories .see-more{
@@ -469,6 +500,18 @@ footer {
 footer .container {
     display: flex;
     justify-content: space-between;
+}
+
+footer .container .course img, footer .container ul img{
+    transition: opacity 0.7s;
+}
+
+footer .container img:hover{
+    opacity: 0.4;
+}
+
+footer .container ul img:hover{
+    opacity: 0.5;
 }
 
 footer p {
