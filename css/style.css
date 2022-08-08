@@ -10,9 +10,27 @@ html, body {
 
 .container {
     margin: 0 auto;
-    width: 1200px;
+    width: 1440px;
     padding: 0 120px;
 }
+
+.see-more button, .find-more button{
+    margin: 40px auto 80px;
+    padding: 14px 33px 13px 81px;
+    border: none;
+    outline: none;
+    background: #0D606F;
+    border-radius: 10px;
+    font-family: 'Red Hat Text', sans-serif;
+    color: #fff;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    background-image: url(../img/arrow.svg);
+    background-repeat: no-repeat;
+    background-position: 35px center;
+    background-size: 35px 22px;
+} 
 
 header {
     position: relative;
@@ -83,8 +101,6 @@ main {
 
 #preview {
     margin-top: -90px; 
-    display: flex;
-    justify-content: center;
     margin-bottom: 80px;
 }
 
@@ -242,6 +258,14 @@ main {
     margin-left: 70px;
 }
 
+#destinations {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
 #destinations h2 {
     margin: 0 0 40px;
     font-family: 'Red Hat Text', sans-serif;
@@ -251,14 +275,6 @@ main {
     line-height: 53px;
     color: #F2785C;
     text-align: center;
-}
-
-#destinations {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    overflow: hidden;
 }
 
 #destinations .destinations-pictures {
@@ -309,20 +325,132 @@ main {
     border-radius: 50%;
 }
 
-#destinations .find-more button{
-    margin: 40px auto 80px;
-    padding: 14px 33px 13px 81px;
-    border: none;
-    outline: none;
-    background: #0D606F;
-    border-radius: 10px;
+#stories {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#stories h2 {
+    margin: 0 0 40px;
     font-family: 'Red Hat Text', sans-serif;
-    color: #fff;
+    font-style: normal;
     font-weight: 500;
-    font-size: 24px;
-    line-height: 32px;
-    background-image: url(../img/arrow.svg);
+    font-size: 40px;
+    line-height: 53px;
+    color: #F2785C;
+    text-align: center;
+}
+
+#stories .stories-list {
+    display: flex;
+    justify-content: center;
+}
+
+#stories .stories-list .stories {
+    background: url(../img/background-stories-list.jpg);
     background-repeat: no-repeat;
-    background-position: 35px center;
-    background-size: 35px 22px;
+    background-position: top center;
+}
+
+#stories .stories-list .stories .container {
+    padding-top: 40px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+#stories .stories-list .stories .container .story {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+#stories .stories-list .stories .container .story .text {
+    width: 760px;
+}
+
+#stories .stories-list .stories .container .story .image1{
+    width: 400px;
+    height: 250px;
+    border-radius: 16px;
+    overflow: hidden;
+    filter: drop-shadow(0px 4px 4px #0D606F);
+    line-height: 0em;
+    background: url(../img/first-story-img.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: auto 100%;
+}
+
+#stories .stories-list .stories .container .story .image2{
+    width: 400px;
+    height: 250px;
+    border-radius: 16px;
+    overflow: hidden;
+    filter: drop-shadow(0px 4px 4px #0D606F);
+    line-height: 0em;
+    background: url(../img/second-story-img.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: auto 100%;
+}
+
+#stories .stories-list .stories .container .story .image3{
+    width: 400px;
+    height: 250px;
+    border-radius: 16px;
+    overflow: hidden;
+    filter: drop-shadow(0px 4px 4px #0D606F);
+    line-height: 0em;
+    background: url(../img/third-story-img.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: auto 100%;
+}
+
+#stories .stories-list .stories .container .story .image4{
+    width: 400px;
+    height: 250px;
+    border-radius: 16px;
+    overflow: hidden;
+    filter: drop-shadow(0px 4px 4px #0D606F);
+    line-height: 0em;
+    background: url(../img/four-story-img.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: auto 100%;
+}
+
+#stories .stories-list .stories .container .story .text h5{
+    margin: 0;
+    font-family: 'Aleo', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 42px;
+    color: #0D606F;
+}
+
+#stories .text p {
+    font-family: 'Aleo', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #0D606F;
+    margin-top: 24px;
+    margin-bottom: 0px;
+}
+
+#stories .text a {
+    font-family: 'Aleo', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #0D606F;
+}
+
+#stories .see-more{
+    text-align: center;
+}
+
+#stories .see-more button {
+    margin-top: 10px;
 }
