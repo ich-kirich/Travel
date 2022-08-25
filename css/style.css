@@ -542,6 +542,10 @@ footer .youtube {
 }
 
 @media screen and (max-width: 390px) {
+    .container {
+        width: auto;
+    }
+
     header {
         padding: 0px;
         padding-top: 45px;
@@ -552,6 +556,7 @@ footer .youtube {
         padding: 0px;
         padding-left: 16px;
     }
+
     #preview .container {
         min-height: 251px;
         width: auto;
@@ -563,8 +568,12 @@ footer .youtube {
         display: none;
     }
     
-    main h1, main p {
+    #preview h1, #preview p {
         display: none;
+    }
+
+    #preview {
+        margin-bottom: 20px;
     }
 
     #preview .preview-inner .search-field {
@@ -654,6 +663,105 @@ footer .youtube {
 
     #nav-toggle span:nth-child(3) {
         top: 22px;
+    }
+
+    #steps {
+        margin-bottom: 22px;
+    }
+
+    #steps .container-steps {
+        width: auto;
+    }
+
+    #steps .container-steps h2 {
+        margin: 0 0 20px;
+        font-family: 'Red Hat Text', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 19px;
+        color: #F2785C;
+        text-align: center;
+    }
+
+    #steps .container-steps .list-steps {
+        padding: 0 15px;
+        margin: 0 0 22px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #steps .list-steps .step:nth-child(2) {
+         margin-left: 0px;
+    }
+
+    #steps .step img {
+        width: 70px;
+        height: 70px;
+        margin: 0 auto 30px;
+        background: #F2785C;
+        border-radius: 16px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    #steps .step:first-child p {
+        text-align: left;
+        width: 94px
+    }
+    
+    #steps .step p {
+        margin: 0;
+        color: #0D606F;
+        font-family: 'Aleo', sans-serif;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 12px;
+    }
+
+    #steps .step:first-child .icon {
+        margin-left: 0;
+        margin-right: 20px;
+    }
+
+    #steps .step:nth-child(2) {
+        margin-left: 12px;
+    }
+
+    
+    #steps .step .icon {
+        width: 70px;
+        height: 70px;
+        margin: 0 auto 19px;
+        background: #F2785C;
+        border-radius: 16px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    #steps .step:last-child * {
+        margin-right: 0;
+        margin-left: auto;
+    }
+
+    #steps .step:last-child p {
+        text-align: right;
+        width: 94px
+    }
+    
+    #steps .container-steps .list-steps .step .bike {
+        background-image: url(../img/step_first.svg);
+        background-size: 35px 31px;
+    }
+    
+    #steps .container-steps .list-steps .step .calendar {
+        background-image: url(../img/step_second.svg);
+        background-size: 35px 31px;
+    }
+    
+    #steps .container-steps .list-steps .step .plane {
+        background-image: url(../img/step_third.svg);
+        background-size: 35px 31px;
     }
 }
 
