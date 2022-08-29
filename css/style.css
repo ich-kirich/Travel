@@ -763,5 +763,216 @@ footer .youtube {
         background-image: url(../img/step_third.svg);
         background-size: 35px 31px;
     }
+
+    #destinations h2 {
+        margin: 0 0 20px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 19px;
+        color: #F2785C;
+    }
+
+    #destinations .destinations-pictures {
+        margin: 0px;
+        display: flex;
+        justify-content: flex-start;
+        list-style: none;
+    }
+    #destinations .destinations-pictures :nth-child(2), #destinations .destinations-pictures :nth-child(3) {
+        display: none;
+    }
+
+    #destinations .destinations-pictures .pictures {
+        border-radius: 0px;
+        flex: none;
+        margin: 0;
+    }
+
+    #destinations .destinations-pictures .pictures img {
+        content: url(../img/spain-mobile.jpg);
+        border-radius: 16px;
+    }
+    
+    #destinations .destinations-pictures .pictures :nth-child(2) {
+        display: block;
+        position: absolute;
+        left: 16px;
+        bottom: 180px;
+        font-family: 'Red Hat Text', sans-serif;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 26px;
+        text-transform: uppercase;
+        color: #fff;
+    }
+
+    #destinations .roulette-next img {
+        top: 61%;
+        margin-top: -14px;
+        position: absolute;
+        display: block;
+        cursor: pointer;
+        right: 14px;
+    }
+
+    #destinations .roulette-prev img {
+        top: 61%;
+        right: 92%;
+        margin-top: -14px;
+        position: absolute;
+        display: block;
+        cursor: pointer;
+    }
+
+    #destinations .pagination {
+        gap: 6px;
+        padding: 0;
+        list-style: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 280px;
+    }
+
+    #destinations .pagination .point-no-choose {
+        width: 8px;
+        height: 8px;
+    }
+    
+    #destinations .pagination .point-choose {
+        width: 8px;
+        height: 8px;
+    }
+
+    #destinations .find-more button{
+        margin: 0px auto 20px;
+        padding: 10px 12px;
+        padding-left: 28px;
+        padding-right: 12px;
+        font-size: 11px;
+        line-height: 15px;
+        background-image: url(../img/arrow-mobile.svg);
+        background-size: 8px 5px;
+        background-position: 12px 14px;
+    }
+
+    #stories h2 {
+        margin: 0 0 10px;
+        font-size: 14px;
+        line-height: 19px;
+    }
+
+    #stories .stories-list .stories {
+        padding: 0 0 61px;
+        margin-bottom: -61px;
+        background: url(../img/background-stories-list-mobile.jpg);
+    }
+    
+    #stories .stories .list {
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+    
+    #stories .stories .container {
+        padding-top: 10px;
+    }
+    
+    #stories .story .text {
+        width: 390px;
+    }
+    
+    #stories .story .image1{
+        width: 155px;
+        height: 130px;
+        border-radius: 16px;
+        overflow: hidden;
+        filter: drop-shadow(0px 4px 4px #0D606F);
+        line-height: 0em;
+        background: url(../img/first-story-img.jpg);
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: auto 100%;
+    }
+    
+    #stories .story .image2{
+        width: 400px;
+        height: 250px;
+        border-radius: 16px;
+        overflow: hidden;
+        filter: drop-shadow(0px 4px 4px #0D606F);
+        line-height: 0em;
+        background: url(../img/second-story-img.jpg);
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: auto 100%;
+    }
+    
+    #stories .story .image3{
+        width: 400px;
+        height: 250px;
+        border-radius: 16px;
+        overflow: hidden;
+        filter: drop-shadow(0px 4px 4px #0D606F);
+        line-height: 0em;
+        background: url(../img/third-story-img.jpg);
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: auto 100%;
+    }
+    
+    #stories .story .image4{
+        width: 400px;
+        height: 250px;
+        border-radius: 16px;
+        overflow: hidden;
+        filter: drop-shadow(0px 4px 4px #0D606F);
+        line-height: 0em;
+        background: url(../img/four-story-img.jpg);
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: auto 100%;
+    }
+    
+    #stories .text h5{
+        margin: 0;
+        font-family: 'Aleo', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 35px;
+        line-height: 42px;
+        color: #0D606F;
+    }
+    
+    #stories .text p {
+        margin-top: 24px;
+        margin-bottom: 0px;
+        font-family: 'Aleo', sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 24px;
+        color: #0D606F;
+    }
+    
+    #stories .text a {
+        font-family: 'Aleo', sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        color: #0D606F;
+        cursor: pointer;
+        transition: color .5s linear;
+    }
+    
+    #stories .text a:hover{
+        color: #ac2e25 ;
+    }
+    
+    #stories .see-more{
+        text-align: center;
+    }
+    
+    #stories .see-more button {
+        margin-top: 10px;
+        margin-bottom: 41px;
+    }
+
 }
 
