@@ -5,6 +5,7 @@
 html, body {
     margin: 0 auto;
     width: 100%;
+    overflow-x: hidden;
 }
 
 .container {
@@ -831,7 +832,7 @@ footer .youtube {
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 280px;
+        bottom: 295px;
     }
 
     #destinations .pagination .point-no-choose {
@@ -863,9 +864,11 @@ footer .youtube {
     }
 
     #stories .stories-list .stories {
-        padding: 0 0 61px;
-        margin-bottom: -61px;
+        padding: 0 0 50px;
+        margin-bottom: -50px;
         background: url(../img/background-stories-list-mobile.jpg);
+        background-repeat: no-repeat;
+        background-position: top center;
     }
     
     #stories .stories .list {
@@ -873,60 +876,74 @@ footer .youtube {
     }
     
     #stories .stories .container {
-        padding-top: 10px;
+        padding: 10px 15px;
+        width: auto;
+        margin: 0 auto;
+    }
+
+    #stories .container .story {
+        overflow: hidden;
+        padding: 0 0 13px;
+        margin-bottom: 0;
+        gap: 10px;
+    }
+
+    #stories .container .story  * {
+        flex: 1 0 auto;
     }
     
     #stories .story .text {
-        width: 390px;
+        width: 50%;
+        text-overflow: ellipsis;
     }
     
     #stories .story .image1{
-        width: 155px;
+        max-width: 155px;
         height: 130px;
         border-radius: 16px;
         overflow: hidden;
         filter: drop-shadow(0px 4px 4px #0D606F);
         line-height: 0em;
-        background: url(../img/first-story-img.jpg);
+        background: url(../img/first-story-img-mobile.jpg);
         background-repeat: no-repeat;
         background-position: top center;
         background-size: auto 100%;
     }
     
     #stories .story .image2{
-        width: 400px;
-        height: 250px;
+        max-width: 155px;
+        height: 130px;
         border-radius: 16px;
         overflow: hidden;
         filter: drop-shadow(0px 4px 4px #0D606F);
         line-height: 0em;
-        background: url(../img/second-story-img.jpg);
+        background: url(../img/second-story-img-mobile.jpg);
         background-repeat: no-repeat;
         background-position: top center;
         background-size: auto 100%;
     }
     
     #stories .story .image3{
-        width: 400px;
-        height: 250px;
+        max-width: 155px;
+        height: 130px;
         border-radius: 16px;
         overflow: hidden;
         filter: drop-shadow(0px 4px 4px #0D606F);
         line-height: 0em;
-        background: url(../img/third-story-img.jpg);
+        background: url(../img/third-story-img-mobile.jpg);
         background-repeat: no-repeat;
         background-position: top center;
         background-size: auto 100%;
     }
     
     #stories .story .image4{
-        width: 400px;
-        height: 250px;
+        max-width: 155px;
+        height: 130px;
         border-radius: 16px;
         overflow: hidden;
         filter: drop-shadow(0px 4px 4px #0D606F);
         line-height: 0em;
-        background: url(../img/four-story-img.jpg);
+        background: url(../img/four-story-img-mobile.jpg);
         background-repeat: no-repeat;
         background-position: top center;
         background-size: auto 100%;
@@ -934,44 +951,55 @@ footer .youtube {
     
     #stories .text h5{
         margin: 0;
-        font-family: 'Aleo', sans-serif;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 35px;
-        line-height: 42px;
+        margin-bottom: 10px;
+        font-weight: 700;
+        font-size: 11px;
+        line-height: 13px;
         color: #0D606F;
     }
     
     #stories .text p {
-        margin-top: 24px;
+        margin: 0;
+        height: 9.5em;
+        overflow: hidden;
         margin-bottom: 0px;
-        font-family: 'Aleo', sans-serif;
-        font-size: 20px;
-        font-weight: 400;
-        line-height: 24px;
+        font-size: 9px;
+        line-height: 11px;
         color: #0D606F;
     }
     
     #stories .text a {
-        font-family: 'Aleo', sans-serif;
-        font-size: 20px;
-        font-weight: 700;
-        color: #0D606F;
-        cursor: pointer;
-        transition: color .5s linear;
+        font-size: 8px;
+        line-height: 10px;
     }
-    
-    #stories .text a:hover{
-        color: #ac2e25 ;
-    }
-    
+
     #stories .see-more{
         text-align: center;
     }
     
     #stories .see-more button {
-        margin-top: 10px;
-        margin-bottom: 41px;
+        margin: 0;
+        padding: 10px 12px;
+        padding-left: 28px;
+        padding-right: 12px;
+        font-size: 11px;
+        line-height: 15px;
+        background-size: 8px 5px;
+        background-position: 12px 14px;
+    }
+
+    footer {
+        height: 50px;
+        padding-top: 13px;
+    }
+
+    footer .course, footer p{
+        display: none;
+    }
+
+    footer ul {
+        width: 140px;
+        margin: 0 auto;
     }
 
 }
