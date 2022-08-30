@@ -3,6 +3,7 @@
     <head>
         <title>Travel</title>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/style.css"/>
         <link rel="icon" href="img/favicon.svg" type="image/x-icon"/>
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,10 +23,19 @@
                         <li><a href="#steps">Plan Your Trip</a></li>
                         <li><a href="#destinations">Destinations</a></li>
                         <li><a href="#stories">Travel Stories</a></li>
+                        <li class="account"><a href="#media">Account</a></li>
+                        <li class="socia-media"><a href="#media">Social Media</a></li>
+                        <li class="show-adaptive close"><img src="img/close-menu.svg" alt="close"></li>
                     </ul>
                 </nav>
+                <div class="big-shadow"></div>
                 <div class="login">
                     <button>Login</button>
+                </div>
+                <div id="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
         </header>
@@ -63,24 +73,32 @@
             </section>
             <section id="destinations">
                 <h2>POPULAR DESTINATIONS</h2>
-                <div class="destinations-pictures">
-                    <div class="pictures">
-                        <img src="img/ocean.jpg" alt="">
-                        <span>SPAIN</span>
+                <div class="roulette">
+                    <div class="destinations-pictures">
+                        <div class="pictures">
+                            <img src="img/ocean.jpg" alt="spain">
+                            <span>SPAIN</span>
+                        </div>
+                        <div class="pictures">
+                            <img src="img/japan.jpg" alt="japan">
+                            <span>JAPAN</span>
+                        </div>
+                        <div class="pictures">
+                            <img src="img/bridge.jpg" alt="bridge">
+                            <span>USA</span>
+                        </div>
                     </div>
-                    <div class="pictures">
-                        <img src="img/japan.jpg" alt="">
-                        <span>JAPAN</span>
+                    <div class="roulette-next">
+                        <img src="img/button-next.svg" alt="next">
                     </div>
-                    <div class="pictures">
-                        <img src="img/bridge.jpg" alt="">
-                        <span>USA</span>
+                    <div class="roulette-prev">
+                        <img src="img/button-prev.svg" alt="prev">
                     </div>
-                </div>
-                <div class="pagination">
-                    <div class="point-no-choose"></div>
-                    <div class="point-choose"></div>
-                    <div class="point-no-choose"></div>
+                    <div class="pagination">
+                        <div class="point-no-choose"></div>
+                        <div class="point-choose"></div>
+                        <div class="point-no-choose"></div>
+                    </div>
                 </div>
                 <div class="find-more">
                     <button>Find More</button>
@@ -144,7 +162,7 @@
                     </a>
                 </div>
                 <p>All Rights Reserved © Travel Portal</p>
-                <ul>
+                <ul id="media">
                     <li>
                         <a href="https://github.com/ich-kirich" target="_blank"><img src="img/instagram.svg" alt="instagram"></a>
                     </li>
@@ -157,5 +175,6 @@
                 </ul>
             </div>
         </footer>
+        <script src="js/menu.js"></script>
     </body>
 </html>

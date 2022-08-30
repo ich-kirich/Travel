@@ -5,7 +5,7 @@
 html, body {
     margin: 0 auto;
     width: 100%;
-    min-width: 1440px;
+    overflow-x: hidden;
 }
 
 .container {
@@ -75,6 +75,11 @@ header nav ul {
 header ul li {
     display: list-item;
 }
+
+header ul .account, header ul .socia-media{
+    display: none;
+}
+
 header li a{
     text-decoration: none;
     font-family: 'Red Hat Text', sans-serif;
@@ -110,6 +115,14 @@ header .login button {
 
 header .login button:hover{
     background-color: #05262c ;
+}
+
+#nav-toggle {
+    display: none;
+}
+
+nav .close {
+    display: none;
 }
 
 main {
@@ -538,5 +551,783 @@ footer .youtube {
     margin-top: 2px;
 }
 
+@media screen and (max-width: 1439px) {
+    html, body {
+        min-width: auto;
+    }
 
+    .container {
+        width: auto;
+        padding: 0 15px;
+    }
+
+    #steps .container-steps {
+        margin: 0 auto;
+        width: auto; 
+    }
+
+    #stories .stories-list .stories {
+        padding: 0 0 61px;
+        margin-bottom: -61px;
+        background: url(../img/background-stories-list.jpg);
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: 100% 100%;
+        min-height: auto;
+    }
+
+    #stories .story .image1 {
+        border-radius: 16px;
+        overflow: hidden;
+        filter: drop-shadow(0px 4px 4px #0D606F);
+        line-height: 0em;
+        background: url(../img/first-story-img.jpg);
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: 100% 100%;
+        min-height: auto;
+        width: 100%;
+    }
+
+    #stories .story .image2{
+        border-radius: 16px;
+        overflow: hidden;
+        filter: drop-shadow(0px 4px 4px #0D606F);
+        line-height: 0em;
+        background: url(../img/second-story-img-mobile.jpg);
+        background-size: 100% 100%;
+        min-height: auto;
+        width: 100%;
+    }
+    
+    #stories .story .image3{
+        border-radius: 16px;
+        overflow: hidden;
+        filter: drop-shadow(0px 4px 4px #0D606F);
+        line-height: 0em;
+        background: url(../img/third-story-img-mobile.jpg);
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: 100% 100%;
+        min-height: auto;
+        width: 100%;
+    }
+    
+    #stories .story .image4{
+        border-radius: 16px;
+        overflow: hidden;
+        filter: drop-shadow(0px 4px 4px #0D606F);
+        line-height: 0em;
+        background: url(../img/four-story-img-mobile.jpg);
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: 100% 100%;
+        min-height: auto;
+        width: 100%;
+    }
+
+    #stories .story .text {
+        width: auto;
+    }
+
+    #stories .story .text p{
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 24px;
+    }
+
+    #stories .text h5 {
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 940px) {
+
+    header .container .logo span{
+        display: none;
+    }
+
+    #preview .preview-inner {
+        padding-top: 122px;
+        width: 100%;
+    }
+
+    #preview .preview-inner .search-field {
+        min-height: auto;
+        max-width: 100%;
+        background-size: 100% 100%;
+    }
+
+    #preview .search-field input[type="text"] {
+        max-width: 100%;
+        padding: 0;
+        font-size: 24px;
+        line-height: 29px;
+        color: #F2785C;
+    }
+
+    #preview .search-field input::placeholder {
+        max-width: 100%;
+        font-family: 'Aleo', sans-serif;
+        font-style: italic;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 29px;
+        color: #F2785C;
+    }
+
+    #destinations .destinations-pictures .pictures span {
+        left: 50px;
+    }
+
+}
+
+@media screen and (max-width: 740px) {
+    header .container .logo {
+        display: none;
+    }
+
+    header .container nav {
+        margin: 10px 0 0 0px;
+    }
+
+    #destinations .destinations-pictures .pictures span {
+        left: 80px;
+    }
+
+    header li a {
+        font-size: 10px;
+    }
+
+    header .login button {
+        padding: 5px 15px;
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    #destinations .destinations-pictures .pictures span {
+        left: 180px;
+    }
+
+    footer .course{
+        display: none;
+    }
+
+    footer p {
+        display: none;
+    }
+
+    #stories .story .image1{
+        display: none;
+    }
+    
+    #stories .story .image2{
+        display: none;
+    }
+    
+    #stories .story .image3{
+        display: none;
+    }
+    
+    #stories .story .image4{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        padding: 0;
+    }
+
+    header li a {
+        font-size: 8px;
+        line-height: 8px;
+    }
+
+    header .login button {
+        padding: 3px 10px;
+        font-size: 8px;
+    }
+
+    #preview .preview-inner h1 {
+        font-size: 40px;
+        line-height: 48px;
+    }
+
+    #preview .search-field button {
+        margin-right: 0px;
+        width: auto;
+        font-size: 8px;
+        line-height: 11px;
+        padding: 3px 10px;
+        height: 50px;
+    }
+
+    #steps .list-steps .step:nth-child(2) {
+        margin-left: 0px;
+    }
+
+    #destinations .destinations-pictures .pictures span {
+        left: 250px;
+    }
+
+    #preview .search-field input[type="text"] {
+        font-size: 12px;
+        line-height: 29px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .container {
+        width: auto;
+        padding: 0 15px;
+    }
+
+    header .container .logo {
+        display: block;
+    }
+
+    header {
+        padding: 0px;
+        padding-top: 45px;
+        background: linear-gradient(180deg, #0D606F 0%, rgba(13, 96, 111, 0) 25.1%);
+        box-shadow: none;
+    }
+    header .container {
+        padding: 0px;
+        padding-left: 16px;
+    }
+
+    #preview .container {
+        min-height: 251px;
+        width: auto;
+        padding: 0 15px;
+        background: url(../img/preview-back-mobile.jpg);
+        min-height: auto;
+        background-size: 100% 100%;
+    }
+
+    .logo span, .login {
+        display: none;
+    }
+
+    nav {
+        transition: 0.5s;
+        position: fixed;
+        right: -100vw;
+        width: 165px;
+        padding: 44px 15px 30px 0;
+        display: block !important;
+        background: #F2785C;
+        box-shadow: 0px 4px 3px rgb(13 96 111 / 25%);
+        border-radius: 10px;
+        z-index: 60;
+        top: 0;
+        margin: 0;
+    }
+
+    header nav ul{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav li {
+        text-align: right;
+    }
+
+    header ul .account, header ul .socia-media{
+        display: block;
+    }
+
+    header nav a{
+        font-size: 16px;
+        line-height: 21px;
+    }
+
+    nav .close {
+        display: block;
+        position: absolute;
+        left: 15px;
+        top: 15px;
+    }
+
+    .active-menu nav {
+        right: 0px;
+    }
+
+    .big-shadow {
+        display: none;
+        transition: 0.5s;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 50;
+        opacity: 0;
+        position: fixed;
+    }
+
+    .active-menu .big-shadow {
+        display: block;
+        z-index: 50;
+        opacity: 1;
+    }
+    
+    #preview h1, #preview p {
+        display: none;
+    }
+
+    #preview {
+        margin-bottom: 20px;
+    }
+
+    #preview .preview-inner .search-field {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: auto;
+        height: 48px;
+        background: rgba(255, 255, 255, 0.7);
+        border-radius: 16px;
+    }
+
+    #preview .search-field input[type="text"] {
+        padding: 0 0 0 16px;
+        width: 226px;
+        height: 48px;
+        border: none;
+        background: none;
+        outline: none;
+        font-family: 'Aleo', sans-serif;
+        font-style: italic;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #F2785C;
+    }
+
+    #preview .preview-inner {
+        padding: 0px;
+        padding-top: 142px;
+        padding-bottom: 61px;
+        width: auto;
+    }
+
+    #preview .search-field button {
+        margin-right: 9px;
+        width: 92px;
+        height: 30px;
+        box-sizing: border-box;
+        border: none;
+        border-radius: 10px;
+        font-family: 'Red Hat Text', sans-serif;
+        font-style: normal;
+        background-color: #0D606F;
+        color: #fff;
+        font-weight: 500;
+        font-size: 11px;
+        line-height: 15px;
+        box-shadow: 0px 4px 4px rgb(0 0 0 / 25%), 0px 2px 3px rgb(13 96 111 / 16%);
+        cursor: pointer;
+        transition: background-color 1.5s;
+    }
+
+    #preview .search-field input::placeholder {
+        width: 100%;
+        font-family: 'Aleo', sans-serif;
+        font-style: italic;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #F2785C;
+    }
+
+    #nav-toggle {
+        width: 35px;
+        height: 32px;
+        position: absolute;
+        right: 20px;
+        top: 43px;
+        display: block;
+    }
+
+    #nav-toggle span {
+        width: 26px;
+        height: 3px;
+        background-color: #fff;
+        display: block;
+        position: absolute;
+        left: 4px;
+        top: 8px;
+        border-radius: 2px;
+    }
+
+    #nav-toggle span:nth-child(2) {
+        top: 15px;
+    }
+
+    #nav-toggle span:nth-child(3) {
+        top: 22px;
+    }
+
+    #steps {
+        margin-bottom: 22px;
+    }
+
+    #steps .container-steps {
+        width: auto;
+    }
+
+    #steps .container-steps h2 {
+        margin: 0 0 20px;
+        font-family: 'Red Hat Text', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 19px;
+        color: #F2785C;
+        text-align: center;
+    }
+
+    #steps .container-steps .list-steps {
+        padding: 0 15px;
+        margin: 0 0 22px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #steps .list-steps .step:nth-child(2) {
+         margin-left: 0px;
+    }
+
+    #steps .step img {
+        width: 70px;
+        height: 70px;
+        margin: 0 auto 30px;
+        background: #F2785C;
+        border-radius: 16px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    #steps .step:first-child p {
+        text-align: left;
+        width: 94px
+    }
+    
+    #steps .step p {
+        margin: 0;
+        color: #0D606F;
+        font-family: 'Aleo', sans-serif;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 12px;
+    }
+
+    #steps .step:first-child .icon {
+        margin-left: 0;
+        margin-right: 20px;
+    }
+
+    #steps .step:nth-child(2) {
+        margin-left: 12px;
+    }
+
+    
+    #steps .step .icon {
+        width: 70px;
+        height: 70px;
+        margin: 0 auto 19px;
+        background: #F2785C;
+        border-radius: 16px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    #steps .step:last-child * {
+        margin-right: 0;
+        margin-left: auto;
+    }
+
+    #steps .step:last-child p {
+        text-align: right;
+        width: 94px
+    }
+    
+    #steps .container-steps .list-steps .step .bike {
+        background-image: url(../img/step_first.svg);
+        background-size: 35px 31px;
+    }
+    
+    #steps .container-steps .list-steps .step .calendar {
+        background-image: url(../img/step_second.svg);
+        background-size: 35px 31px;
+    }
+    
+    #steps .container-steps .list-steps .step .plane {
+        background-image: url(../img/step_third.svg);
+        background-size: 35px 31px;
+    }
+
+    #destinations h2 {
+        padding: 0 12px;
+        margin: 0 0 20px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 19px;
+        color: #F2785C;
+    }
+
+    #destinations .roulette {
+        margin: 0 0 10px;
+        padding: 0;
+    }
+
+    #destinations .destinations-pictures {
+        display: flex;
+        justify-content: flex-start;
+        list-style: none;
+        margin: 0;
+        padding: 1px 15px 0;
+        position: relative;
+    }
+    #destinations .destinations-pictures :nth-child(2), #destinations .destinations-pictures :nth-child(3) {
+        display: none;
+    }
+
+    #destinations .destinations-pictures .pictures {
+        margin: 0;
+        flex: none;
+        overflow: hidden;
+        position: relative;
+        line-height: 0em;
+        max-width: 100%;
+    }
+
+    #destinations .destinations-pictures .pictures img {
+        max-width: 100%;
+        content: url(../img/spain-mobile.jpg);
+    }
+    
+    #destinations .destinations-pictures .pictures :nth-child(2) {
+        display: block;
+        position: absolute;
+        bottom: initial;
+        top: 8px;
+        left: 15px;
+        font-family: 'Red Hat Text', sans-serif;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 26px;
+        text-transform: uppercase;
+        color: #fff;
+    }
+
+    #destinations .roulette-next img {
+        top: 59%;
+        margin-top: -14px;
+        position: absolute;
+        display: block;
+        cursor: pointer;
+        right: 25px;
+    }
+
+    #destinations .roulette-prev img {
+        top: 59%;
+        left: 25px;
+        margin-top: -14px;
+        position: absolute;
+        display: block;
+        cursor: pointer;
+    }
+
+    #destinations .pagination {
+        gap: 6px;
+        padding: 0;
+        margin: 0px;
+        list-style: none;
+        position: relative;
+        left: 0;
+        right: 0;
+        bottom: 15px;
+    }
+
+    #destinations .pagination .point-no-choose {
+        width: 8px;
+        height: 8px;
+    }
+    
+    #destinations .pagination .point-choose {
+        width: 8px;
+        height: 8px;
+    }
+
+    #destinations .find-more button{
+        margin: 0px auto 20px;
+        padding: 10px 12px;
+        padding-left: 28px;
+        padding-right: 12px;
+        font-size: 11px;
+        line-height: 15px;
+        background-image: url(../img/arrow-mobile.svg);
+        background-size: 8px 5px;
+        background-position: 12px 14px;
+    }
+
+    #stories h2 {
+        margin: 0 0 10px;
+        font-size: 14px;
+        line-height: 19px;
+    }
+
+    #stories .stories-list .stories {
+        padding: 0 0 50px;
+        margin-bottom: -50px;
+        background: url(../img/background-stories-list-mobile.jpg);
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: 100% 100%;
+    }
+    
+    #stories .stories .list {
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+    
+    #stories .stories .container {
+        padding: 10px 15px;
+        width: auto;
+        margin: 0 auto;
+        min-height: auto;
+        background-size: 100% 100%;
+    }
+
+    #stories .container .story {
+        overflow: hidden;
+        padding: 0 0 13px;
+        margin-bottom: 0;
+        gap: 10px;
+    }
+
+    #stories .container .story  * {
+        flex: 1 0 auto;
+    }
+    
+    #stories .story .text {
+        width: 50%;
+        text-overflow: ellipsis;
+    }
+    
+    #stories .story .image1{
+        display: block;
+        max-width: 155px;
+        height: 130px;
+        border-radius: 16px;
+        overflow: hidden;
+        filter: drop-shadow(0px 4px 4px #0D606F);
+        line-height: 0em;
+        background: url(../img/first-story-img-mobile.jpg);
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: auto 100%;
+    }
+    
+    #stories .story .image2{
+        display: block;
+        max-width: 155px;
+        height: 130px;
+        border-radius: 16px;
+        overflow: hidden;
+        filter: drop-shadow(0px 4px 4px #0D606F);
+        line-height: 0em;
+        background: url(../img/second-story-img-mobile.jpg);
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: auto 100%;
+    }
+    
+    #stories .story .image3{
+        display: block;
+        max-width: 155px;
+        height: 130px;
+        border-radius: 16px;
+        overflow: hidden;
+        filter: drop-shadow(0px 4px 4px #0D606F);
+        line-height: 0em;
+        background: url(../img/third-story-img-mobile.jpg);
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: auto 100%;
+    }
+    
+    #stories .story .image4{
+        display: block;
+        max-width: 155px;
+        height: 130px;
+        border-radius: 16px;
+        overflow: hidden;
+        filter: drop-shadow(0px 4px 4px #0D606F);
+        line-height: 0em;
+        background: url(../img/four-story-img-mobile.jpg);
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: auto 100%;
+    }
+    
+    #stories .text h5{
+        margin: 0;
+        margin-bottom: 10px;
+        font-weight: 700;
+        font-size: 11px;
+        line-height: 13px;
+        color: #0D606F;
+    }
+    
+    #stories .text p {
+        margin: 0;
+        height: 9.5em;
+        overflow: hidden;
+        margin-bottom: 0px;
+        font-size: 9px;
+        line-height: 11px;
+        color: #0D606F;
+    }
+    
+    #stories .text a {
+        font-size: 8px;
+        line-height: 10px;
+    }
+
+    #stories .see-more{
+        text-align: center;
+    }
+    
+    #stories .see-more button {
+        margin: 0;
+        padding: 10px 12px;
+        padding-left: 28px;
+        padding-right: 12px;
+        font-size: 11px;
+        line-height: 15px;
+        background-size: 8px 5px;
+        background-position: 12px 14px;
+    }
+
+    footer {
+        height: 50px;
+        padding-top: 13px;
+    }
+
+    footer .course, footer p{
+        display: none;
+    }
+
+    footer ul {
+        width: 140px;
+        margin: 0 auto;
+    }
+
+}
 
