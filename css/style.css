@@ -75,6 +75,11 @@ header nav ul {
 header ul li {
     display: list-item;
 }
+
+header ul .account, header ul .socia-media{
+    display: none;
+}
+
 header li a{
     text-decoration: none;
     font-family: 'Red Hat Text', sans-serif;
@@ -113,6 +118,10 @@ header .login button:hover{
 }
 
 #nav-toggle {
+    display: none;
+}
+
+nav .close {
     display: none;
 }
 
@@ -799,8 +808,71 @@ footer .youtube {
         background-size: 100% 100%;
     }
 
-    .logo span, nav, .login {
+    .logo span, .login {
         display: none;
+    }
+
+    nav {
+        transition: 0.5s;
+        position: fixed;
+        right: -100vw;
+        width: 165px;
+        padding: 44px 15px 30px 0;
+        display: block !important;
+        background: #F2785C;
+        box-shadow: 0px 4px 3px rgb(13 96 111 / 25%);
+        border-radius: 10px;
+        z-index: 60;
+        top: 0;
+        margin: 0;
+    }
+
+    header nav ul{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav li {
+        text-align: right;
+    }
+
+    header ul .account, header ul .socia-media{
+        display: block;
+    }
+
+    header nav a{
+        font-size: 16px;
+        line-height: 21px;
+    }
+
+    nav .close {
+        display: block;
+        position: absolute;
+        left: 15px;
+        top: 15px;
+    }
+
+    .active-menu nav {
+        right: 0px;
+    }
+
+    .big-shadow {
+        display: none;
+        transition: 0.5s;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 50;
+        opacity: 0;
+        position: fixed;
+    }
+
+    .active-menu .big-shadow {
+        display: block;
+        z-index: 50;
+        opacity: 1;
     }
     
     #preview h1, #preview p {
