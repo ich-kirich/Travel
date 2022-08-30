@@ -545,6 +545,7 @@ footer .youtube {
 @media screen and (max-width: 390px) {
     .container {
         width: auto;
+        padding: 0 15px;
     }
 
     header {
@@ -563,6 +564,8 @@ footer .youtube {
         width: auto;
         padding: 0 15px;
         background: url(../img/preview-back-mobile.jpg);
+        min-height: auto;
+        background-size: 100% 100%;
     }
 
     .logo span, nav, .login {
@@ -582,7 +585,7 @@ footer .youtube {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        width: 360px;
+        width: auto;
         height: 48px;
         background: rgba(255, 255, 255, 0.7);
         border-radius: 16px;
@@ -607,6 +610,7 @@ footer .youtube {
         padding: 0px;
         padding-top: 142px;
         padding-bottom: 61px;
+        width: auto;
     }
 
     #preview .search-field button {
@@ -766,6 +770,7 @@ footer .youtube {
     }
 
     #destinations h2 {
+        padding: 0 12px;
         margin: 0 0 20px;
         font-weight: 500;
         font-size: 14px;
@@ -773,32 +778,43 @@ footer .youtube {
         color: #F2785C;
     }
 
+    #destinations .roulette {
+        margin: 0 0 10px;
+        padding: 0;
+    }
+
     #destinations .destinations-pictures {
-        margin: 0px;
         display: flex;
         justify-content: flex-start;
         list-style: none;
+        margin: 0;
+        padding: 1px 15px 0;
+        position: relative;
     }
     #destinations .destinations-pictures :nth-child(2), #destinations .destinations-pictures :nth-child(3) {
         display: none;
     }
 
     #destinations .destinations-pictures .pictures {
-        border-radius: 0px;
-        flex: none;
         margin: 0;
+        flex: none;
+        overflow: hidden;
+        position: relative;
+        line-height: 0em;
+        max-width: 100%;
     }
 
     #destinations .destinations-pictures .pictures img {
+        max-width: 100%;
         content: url(../img/spain-mobile.jpg);
-        border-radius: 16px;
     }
     
     #destinations .destinations-pictures .pictures :nth-child(2) {
         display: block;
         position: absolute;
-        left: 16px;
-        bottom: 180px;
+        bottom: initial;
+        top: 8px;
+        left: 15px;
         font-family: 'Red Hat Text', sans-serif;
         font-weight: 500;
         font-size: 20px;
@@ -808,17 +824,17 @@ footer .youtube {
     }
 
     #destinations .roulette-next img {
-        top: 61%;
+        top: 59%;
         margin-top: -14px;
         position: absolute;
         display: block;
         cursor: pointer;
-        right: 14px;
+        right: 25px;
     }
 
     #destinations .roulette-prev img {
-        top: 61%;
-        right: 92%;
+        top: 59%;
+        left: 25px;
         margin-top: -14px;
         position: absolute;
         display: block;
@@ -828,11 +844,12 @@ footer .youtube {
     #destinations .pagination {
         gap: 6px;
         padding: 0;
+        margin: 0px;
         list-style: none;
-        position: absolute;
+        position: relative;
         left: 0;
         right: 0;
-        bottom: 295px;
+        bottom: 15px;
     }
 
     #destinations .pagination .point-no-choose {
@@ -869,6 +886,7 @@ footer .youtube {
         background: url(../img/background-stories-list-mobile.jpg);
         background-repeat: no-repeat;
         background-position: top center;
+        background-size: 100% 100%;
     }
     
     #stories .stories .list {
@@ -879,6 +897,8 @@ footer .youtube {
         padding: 10px 15px;
         width: auto;
         margin: 0 auto;
+        min-height: auto;
+        background-size: 100% 100%;
     }
 
     #stories .container .story {
