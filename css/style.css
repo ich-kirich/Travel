@@ -542,10 +542,241 @@ footer .youtube {
     margin-top: 2px;
 }
 
+@media screen and (max-width: 1439px) {
+    html, body {
+        min-width: auto;
+    }
+
+    .container {
+        width: auto;
+        padding: 0 15px;
+    }
+
+    #steps .container-steps {
+        margin: 0 auto;
+        width: auto; 
+    }
+
+    #stories .stories-list .stories {
+        padding: 0 0 61px;
+        margin-bottom: -61px;
+        background: url(../img/background-stories-list.jpg);
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: 100% 100%;
+        min-height: auto;
+    }
+
+    #stories .story .image1 {
+        border-radius: 16px;
+        overflow: hidden;
+        filter: drop-shadow(0px 4px 4px #0D606F);
+        line-height: 0em;
+        background: url(../img/first-story-img.jpg);
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: 100% 100%;
+        min-height: auto;
+        width: 100%;
+    }
+
+    #stories .story .image2{
+        border-radius: 16px;
+        overflow: hidden;
+        filter: drop-shadow(0px 4px 4px #0D606F);
+        line-height: 0em;
+        background: url(../img/second-story-img-mobile.jpg);
+        background-size: 100% 100%;
+        min-height: auto;
+        width: 100%;
+    }
+    
+    #stories .story .image3{
+        border-radius: 16px;
+        overflow: hidden;
+        filter: drop-shadow(0px 4px 4px #0D606F);
+        line-height: 0em;
+        background: url(../img/third-story-img-mobile.jpg);
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: 100% 100%;
+        min-height: auto;
+        width: 100%;
+    }
+    
+    #stories .story .image4{
+        border-radius: 16px;
+        overflow: hidden;
+        filter: drop-shadow(0px 4px 4px #0D606F);
+        line-height: 0em;
+        background: url(../img/four-story-img-mobile.jpg);
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: 100% 100%;
+        min-height: auto;
+        width: 100%;
+    }
+
+    #stories .story .text {
+        width: auto;
+    }
+
+    #stories .story .text p{
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 24px;
+    }
+
+    #stories .text h5 {
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 940px) {
+
+    header .container .logo span{
+        display: none;
+    }
+
+    #preview .preview-inner {
+        padding-top: 122px;
+        width: 100%;
+    }
+
+    #preview .preview-inner .search-field {
+        min-height: auto;
+        max-width: 100%;
+        background-size: 100% 100%;
+    }
+
+    #preview .search-field input[type="text"] {
+        max-width: 100%;
+        padding: 0;
+        font-size: 24px;
+        line-height: 29px;
+        color: #F2785C;
+    }
+
+    #preview .search-field input::placeholder {
+        max-width: 100%;
+        font-family: 'Aleo', sans-serif;
+        font-style: italic;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 29px;
+        color: #F2785C;
+    }
+
+    #destinations .destinations-pictures .pictures span {
+        left: 50px;
+    }
+
+}
+
+@media screen and (max-width: 740px) {
+    header .container .logo {
+        display: none;
+    }
+
+    header .container nav {
+        margin: 10px 0 0 0px;
+    }
+
+    #destinations .destinations-pictures .pictures span {
+        left: 80px;
+    }
+
+    header li a {
+        font-size: 10px;
+    }
+
+    header .login button {
+        padding: 5px 15px;
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    #destinations .destinations-pictures .pictures span {
+        left: 180px;
+    }
+
+    footer .course{
+        display: none;
+    }
+
+    footer p {
+        display: none;
+    }
+
+    #stories .story .image1{
+        display: none;
+    }
+    
+    #stories .story .image2{
+        display: none;
+    }
+    
+    #stories .story .image3{
+        display: none;
+    }
+    
+    #stories .story .image4{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        padding: 0;
+    }
+
+    header li a {
+        font-size: 8px;
+        line-height: 8px;
+    }
+
+    header .login button {
+        padding: 3px 10px;
+        font-size: 8px;
+    }
+
+    #preview .preview-inner h1 {
+        font-size: 40px;
+        line-height: 48px;
+    }
+
+    #preview .search-field button {
+        margin-right: 0px;
+        width: auto;
+        font-size: 8px;
+        line-height: 11px;
+        padding: 3px 10px;
+        height: 50px;
+    }
+
+    #steps .list-steps .step:nth-child(2) {
+        margin-left: 0px;
+    }
+
+    #destinations .destinations-pictures .pictures span {
+        left: 250px;
+    }
+
+    #preview .search-field input[type="text"] {
+        font-size: 12px;
+        line-height: 29px;
+    }
+}
+
 @media screen and (max-width: 390px) {
     .container {
         width: auto;
         padding: 0 15px;
+    }
+
+    header .container .logo {
+        display: block;
     }
 
     header {
@@ -918,6 +1149,7 @@ footer .youtube {
     }
     
     #stories .story .image1{
+        display: block;
         max-width: 155px;
         height: 130px;
         border-radius: 16px;
@@ -931,6 +1163,7 @@ footer .youtube {
     }
     
     #stories .story .image2{
+        display: block;
         max-width: 155px;
         height: 130px;
         border-radius: 16px;
@@ -944,6 +1177,7 @@ footer .youtube {
     }
     
     #stories .story .image3{
+        display: block;
         max-width: 155px;
         height: 130px;
         border-radius: 16px;
@@ -957,6 +1191,7 @@ footer .youtube {
     }
     
     #stories .story .image4{
+        display: block;
         max-width: 155px;
         height: 130px;
         border-radius: 16px;
