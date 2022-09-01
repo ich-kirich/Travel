@@ -92,10 +92,12 @@ header li a{
     transition: 1s;
     cursor: pointer;
 }
+
 header li a:hover {
     color: #36b279;    
     transition: all .3s linear;
 }
+
 header .login button {
     padding: 10px 30px;
     color: #fff;
@@ -325,10 +327,10 @@ main {
 #destinations .destinations-pictures .pictures {
     position: relative;
     margin: 0 30px;
+    flex: 1 0 800px;
     overflow: hidden;
     border-radius: 16px;
     line-height: 0em;
-    flex: 1 0 800px;
 }
 
 #destinations .destinations-pictures .pictures span {
@@ -361,6 +363,15 @@ main {
     height: 20px;
     background: #F2785C;
     border-radius: 50%;
+}
+
+
+#destinations .roulette-next {
+    display: none;
+}
+
+#destinations .roulette-prev {
+    display: none;
 }
 
 #stories {
@@ -568,15 +579,17 @@ footer .youtube {
 
     #stories .stories-list .stories {
         padding: 0 0 61px;
+        min-height: auto;
         margin-bottom: -61px;
         background: url(../img/background-stories-list.jpg);
         background-repeat: no-repeat;
         background-position: top center;
         background-size: 100% 100%;
-        min-height: auto;
     }
 
     #stories .story .image1 {
+        min-height: auto;
+        width: 100%;
         border-radius: 16px;
         overflow: hidden;
         filter: drop-shadow(0px 4px 4px #0D606F);
@@ -585,22 +598,22 @@ footer .youtube {
         background-repeat: no-repeat;
         background-position: top center;
         background-size: 100% 100%;
-        min-height: auto;
-        width: 100%;
     }
 
     #stories .story .image2{
+        min-height: auto;
+        width: 100%;
         border-radius: 16px;
         overflow: hidden;
         filter: drop-shadow(0px 4px 4px #0D606F);
         line-height: 0em;
         background: url(../img/second-story-img-mobile.jpg);
         background-size: 100% 100%;
-        min-height: auto;
-        width: 100%;
     }
     
     #stories .story .image3{
+        min-height: auto;
+        width: 100%;
         border-radius: 16px;
         overflow: hidden;
         filter: drop-shadow(0px 4px 4px #0D606F);
@@ -609,11 +622,11 @@ footer .youtube {
         background-repeat: no-repeat;
         background-position: top center;
         background-size: 100% 100%;
-        min-height: auto;
-        width: 100%;
     }
     
     #stories .story .image4{
+        min-height: auto;
+        width: 100%;
         border-radius: 16px;
         overflow: hidden;
         filter: drop-shadow(0px 4px 4px #0D606F);
@@ -622,12 +635,11 @@ footer .youtube {
         background-repeat: no-repeat;
         background-position: top center;
         background-size: 100% 100%;
-        min-height: auto;
-        width: 100%;
     }
 
     #stories .story .text {
         width: auto;
+        padding-left: 15px;
     }
 
     #stories .story .text p{
@@ -682,7 +694,7 @@ footer .youtube {
 
 }
 
-@media screen and (max-width: 740px) {
+@media screen and (max-width: 770px) {
     header .container .logo {
         display: none;
     }
@@ -703,9 +715,43 @@ footer .youtube {
         padding: 5px 15px;
         font-size: 10px;
     }
+
+    #stories .story .text {
+        width: auto;
+    }
 }
 
 @media screen and (max-width: 660px) {
+
+    #steps .step .icon {
+        width: 80px;
+        height: 80px;
+    }
+
+    #steps .container-steps .list-steps .step .bike {
+        background-image: url(../img/step_first.svg);
+        background-size: 40px 40px;
+    }
+
+    #steps .container-steps .list-steps .step .calendar {
+        background-image: url(../img/step_second.svg);
+        background-size: 40px 40px;
+    }
+
+    #steps .container-steps .list-steps .step .plane {
+        background-image: url(../img/step_third.svg);
+        background-size: 40px 40px;
+    }
+
+    #steps .step p {
+        font-size: 15px;
+        line-height: 24px;
+    }
+
+    #steps .list-steps .step:nth-child(2) {
+        margin-left: 0px;
+    }
+
     #destinations .destinations-pictures .pictures span {
         left: 180px;
     }
@@ -750,18 +796,30 @@ footer .youtube {
         font-size: 8px;
     }
 
+    #preview {
+        margin-bottom: 40px;
+    }
+
+    #preview .container {
+        min-height: 500px;
+    }
+
     #preview .preview-inner h1 {
         font-size: 40px;
         line-height: 48px;
     }
 
+    #preview .search-field input[type="text"] {
+        height: 60px;
+    }
+
     #preview .search-field button {
         margin-right: 0px;
         width: auto;
-        font-size: 8px;
-        line-height: 11px;
         padding: 3px 10px;
         height: 50px;
+        font-size: 8px;
+        line-height: 11px;
     }
 
     #steps .list-steps .step:nth-child(2) {
@@ -776,6 +834,164 @@ footer .youtube {
         font-size: 12px;
         line-height: 29px;
     }
+
+    #steps {
+        margin-bottom: 40px;
+    }
+
+    #steps .container-steps h2 {
+        font-size: 30px;
+        line-height: 53px;
+    }
+
+    #steps .container-steps .list-steps .step .bike {
+        background-image: url(../img/step_first.svg);
+        background-size: 40px 40px;
+    }
+
+    #steps .container-steps .list-steps .step .calendar {
+        background-image: url(../img/step_second.svg);
+        background-size: 40px 40px;
+    }
+
+    #steps .container-steps .list-steps .step .plane {
+        background-image: url(../img/step_third.svg);
+        background-size: 40px 40px;
+    }
+
+    #steps .step .icon {
+        width: 80px;
+        height: 80px;
+    }
+
+    #steps .step p {
+        font-size: 15px;
+        line-height: 24px;
+    }
+
+    #destinations h2 {
+        margin: 0 0 20px;
+        font-size: 30px;
+        line-height: 53px;
+    }
+
+    .find-more button {
+        margin: 30px auto 40px;
+    }
+
+    #stories h2 {
+        margin: 0 0 20px;
+        font-size: 30px;
+        line-height: 43px;
+    }
+
+    #stories .text h5 {
+        font-size: 25px;
+        line-height: 32px;
+    }
+
+    #stories .text a {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 412px) {
+    header li a {
+        font-size: 6px;
+        line-height: 6px;
+    }
+
+    header .login button {
+        padding: 2px 5px;
+        font-size: 6px;
+    }
+
+    #preview {
+        margin-bottom: 40px;
+    }
+
+    #preview .preview-inner h1 {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    #preview .preview-inner p {
+        margin-top: 32px;
+        margin-bottom: 46px;
+        font-size: 10px;
+        line-height: 15px;
+    }
+
+    #preview .container {
+        min-height: 400px;
+    }
+
+    #preview .search-field input[type="text"] {
+        height: 50px;
+    }
+
+    #steps {
+        margin-bottom: 40px;
+    }
+
+    #steps .container-steps h2 {
+        font-size: 20px;
+        line-height: 33px;
+    }
+
+    #steps .step .icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    #steps .container-steps .list-steps .step .bike {
+        background-image: url(../img/step_first.svg);
+        background-size: 20px 20px;
+    }
+
+    #steps .container-steps .list-steps .step .calendar {
+        background-image: url(../img/step_second.svg);
+        background-size: 20px 20px;
+    }
+
+    #steps .container-steps .list-steps .step .plane {
+        background-image: url(../img/step_third.svg);
+        background-size: 20px 20px;
+    }
+
+    #steps .step p {
+        font-size: 10px;
+        line-height: 12px;
+    }
+
+    #destinations h2 {
+        margin: 0 0 20px;
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .see-more button, .find-more button {
+        margin: 20px auto 40px;
+    }
+
+    #stories h2 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    #stories .text h5 {
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    #stories .text a {
+        font-size: 12px;
+    }
+
+    #stories .text p {
+        margin-top: 12px;
+    }
+    
 }
 
 @media screen and (max-width: 390px) {
@@ -813,7 +1029,9 @@ footer .youtube {
     }
 
     nav {
-        transition: 0.5s;
+        z-index: 60;
+        top: 0;
+        margin: 0;
         position: fixed;
         right: -100vw;
         width: 165px;
@@ -822,9 +1040,7 @@ footer .youtube {
         background: #F2785C;
         box-shadow: 0px 4px 3px rgb(13 96 111 / 25%);
         border-radius: 10px;
-        z-index: 60;
-        top: 0;
-        margin: 0;
+        transition: 0.5s;
     }
 
     header nav ul{
@@ -858,15 +1074,15 @@ footer .youtube {
 
     .big-shadow {
         display: none;
-        transition: 0.5s;
+        position: fixed;
         left: 0;
         right: 0;
         top: 0;
         bottom: 0;
-        background-color: rgba(0, 0, 0, 0.3);
         z-index: 50;
+        background-color: rgba(0, 0, 0, 0.3);
         opacity: 0;
-        position: fixed;
+        transition: 0.5s;
     }
 
     .active-menu .big-shadow {
@@ -946,22 +1162,22 @@ footer .youtube {
     }
 
     #nav-toggle {
-        width: 35px;
-        height: 32px;
         position: absolute;
         right: 20px;
         top: 43px;
         display: block;
+        width: 35px;
+        height: 32px;
     }
 
     #nav-toggle span {
-        width: 26px;
-        height: 3px;
-        background-color: #fff;
-        display: block;
         position: absolute;
         left: 4px;
         top: 8px;
+        display: block;
+        width: 26px;
+        height: 3px;
+        background-color: #fff;
         border-radius: 2px;
     }
 
@@ -1004,9 +1220,9 @@ footer .youtube {
     }
 
     #steps .step img {
+        margin: 0 auto 30px;
         width: 70px;
         height: 70px;
-        margin: 0 auto 30px;
         background: #F2785C;
         border-radius: 16px;
         background-position: center;
@@ -1054,7 +1270,7 @@ footer .youtube {
 
     #steps .step:last-child p {
         text-align: right;
-        width: 94px
+        width: 94px;
     }
     
     #steps .container-steps .list-steps .step .bike {
@@ -1087,12 +1303,12 @@ footer .youtube {
     }
 
     #destinations .destinations-pictures {
+        position: relative;
+        margin: 0;
+        padding: 1px 15px 0;
         display: flex;
         justify-content: flex-start;
         list-style: none;
-        margin: 0;
-        padding: 1px 15px 0;
-        position: relative;
     }
     #destinations .destinations-pictures :nth-child(2), #destinations .destinations-pictures :nth-child(3) {
         display: none;
@@ -1100,11 +1316,11 @@ footer .youtube {
 
     #destinations .destinations-pictures .pictures {
         margin: 0;
+        max-width: 100%;
         flex: none;
         overflow: hidden;
         position: relative;
         line-height: 0em;
-        max-width: 100%;
     }
 
     #destinations .destinations-pictures .pictures img {
@@ -1126,33 +1342,41 @@ footer .youtube {
         color: #fff;
     }
 
+    #destinations .roulette-next {
+        display: block;
+    }
+
+    #destinations .roulette-prev {
+        display: block;
+    }
+
     #destinations .roulette-next img {
+        position: absolute;
+        right: 25px;
         top: 59%;
         margin-top: -14px;
-        position: absolute;
         display: block;
         cursor: pointer;
-        right: 25px;
     }
 
     #destinations .roulette-prev img {
+        position: absolute;
+        display: block;
         top: 59%;
         left: 25px;
         margin-top: -14px;
-        position: absolute;
-        display: block;
         cursor: pointer;
     }
 
     #destinations .pagination {
-        gap: 6px;
-        padding: 0;
-        margin: 0px;
-        list-style: none;
         position: relative;
         left: 0;
         right: 0;
         bottom: 15px;
+        gap: 6px;
+        padding: 0;
+        margin: 0px;
+        list-style: none;
     }
 
     #destinations .pagination .point-no-choose {
@@ -1205,10 +1429,10 @@ footer .youtube {
     }
 
     #stories .container .story {
-        overflow: hidden;
         padding: 0 0 13px;
         margin-bottom: 0;
         gap: 10px;
+        overflow: hidden;
     }
 
     #stories .container .story  * {
@@ -1328,6 +1552,5 @@ footer .youtube {
         width: 140px;
         margin: 0 auto;
     }
-
 }
 
