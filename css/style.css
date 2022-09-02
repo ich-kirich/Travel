@@ -572,32 +572,27 @@ footer .youtube {
 }
 
 .registration-window {
-    width: 650px;
+    position: absolute;
+    left: 50%;
     top: 50px;
+    z-index: 55;
+    width: 650px;
+    margin-left: -325px;
     border-radius: 16px;
     background: linear-gradient(177.09deg, #FFFFFF 6.15%, #0D606F 202.69%);
     box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
     padding: 25px 45px 23px;
     text-align: center;
-    transition: 0.5s;
-    position: absolute;
-    left: 50%;
-    margin-left: -325px;
-    z-index: 55;
 }
 
 .registration-window h4 {
+    margin: 0 0 30px;
     font-family: 'Aleo', serif;
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
     line-height: 38px;
-    margin: 0 0 30px;
     color: #0D606F;
-}
-
-.registration {
-    overflow: hidden;
 }
 
 .registration-window .social-login .facebook {
@@ -605,10 +600,10 @@ footer .youtube {
     color: #fff;
 }
 .registration-window .social-login a {
-    display: block;
     position: relative;
-    box-shadow: 0px 0px 3px rgb(13 96 111 / 8%), 0px 2px 3px rgb(13 96 111 / 16%);
+    display: block;
     margin-bottom: 20px;
+    box-shadow: 0px 0px 3px rgb(13 96 111 / 8%), 0px 2px 3px rgb(13 96 111 / 16%);
     font-family: 'Red Hat Text', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -643,15 +638,16 @@ footer .youtube {
 }
 
 .registration-window .devider span::before, .registration-window .devider span::after {
-    content: "";
-    display: block;
     position: absolute;
     top: 50%;
-    background-color: rgba(13, 96, 111, 0.5);
+    display: block;
     height: 1px;
+    content: "";
+    background-color: rgba(13, 96, 111, 0.5);
 }
 
 .registration-window .input-field span {
+    margin-bottom: 5px;
     display: block;
     text-align: left;
     font-family: 'Aleo', serif;
@@ -660,38 +656,41 @@ footer .youtube {
     font-size: 16px;
     line-height: 19px;
     color: #0D606F;
-    margin-bottom: 5px;
 }
 
 .registration-window input[type="text"], .registration-window input[type="password"] {
+    width: 100%;
+    height: 54px;
+    margin-bottom: 20px;
+    padding-left: 15px;
     border: none !important;
     outline: none !important;
     background: #FFFFFF;
     box-shadow: inset 0px 0px 3px rgb(13 96 111 / 8%), inset 0px 2px 3px rgb(13 96 111 / 16%);
     border-radius: 10px;
-    width: 100%;
-    height: 54px;
-    margin-bottom: 20px;
-    padding-left: 15px;
 }
 
 .registration-window button {
     width: 100%;
+    height: 54px;
+    margin: 5px 0 10px;
     box-shadow: 0px 0px 3px rgb(13 96 111 / 8%), 0px 2px 3px rgb(13 96 111 / 16%);
     border-radius: 10px;
-    height: 54px;
     font-family: 'Red Hat Text', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 26px;
-    margin: 5px 0 10px;
     border: none;
     outline: none;
     background: #0D606F;
     color: #fff;
     cursor: pointer;
     transition: background-color 1.5s;
+}
+
+.registration-window button:hover, .login-window button:hover {
+    background-color: #05262c;
 }
 
 .registration-window .forgott-pass {
@@ -728,16 +727,15 @@ footer .youtube {
 }
 
 .registration-shadow {
-    display: block;
-    transition: 0.5s;
+    position: fixed;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.3);
     z-index: 53;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.3);
     opacity: 1;
-    position: fixed;
 }
 
 .login-form{
@@ -749,18 +747,17 @@ footer .youtube {
 }
 
 .login-window {
-    width: 650px;
     position: fixed;
+    top: 50px;
     left: 50%;
+    z-index: 55;
     margin-left: -325px;
+    padding: 25px 45px 23px;
+    width: 650px;
     border-radius: 16px;
     background: linear-gradient(177.09deg, #FFFFFF 6.15%, #0D606F 202.69%);
     box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
-    z-index: 55;
-    padding: 25px 45px 23px;
     text-align: center;
-    transition: 0.5s;
-    top: 50px;
 }
 
 .login-window h4 {
@@ -774,6 +771,7 @@ footer .youtube {
 }
 
 .login-window .input-field span{
+    margin-bottom: 5px;
     display: block;
     text-align: left;
     font-family: 'Aleo', serif;
@@ -782,20 +780,19 @@ footer .youtube {
     font-size: 16px;
     line-height: 19px;
     color: #0D606F;
-    margin-bottom: 5px;
 }
 
 .login-window button {
     width: 100%;
+    margin: 5px 0 10px;
+    height: 54px;
     box-shadow: 0px 0px 3px rgb(13 96 111 / 8%), 0px 2px 3px rgb(13 96 111 / 16%);
     border-radius: 10px;
-    height: 54px;
     font-family: 'Red Hat Text', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 26px;
-    margin: 5px 0 10px;
     border: none;
     outline: none;
     background: #0D606F;
@@ -805,15 +802,15 @@ footer .youtube {
 }
 
 .login-window .input-field input[type="text"], .login-window .input-field input[type="password"] {
+    width: 100%;
+    height: 54px;
+    margin-bottom: 20px;
+    padding-left: 15px;
     border: none !important;
     outline: none !important;
     background: #FFFFFF;
     box-shadow: inset 0px 0px 3px rgb(13 96 111 / 8%), inset 0px 2px 3px rgb(13 96 111 / 16%);
     border-radius: 10px;
-    width: 100%;
-    height: 54px;
-    margin-bottom: 20px;
-    padding-left: 15px;
 }
 
 .login-window hr {
@@ -839,16 +836,16 @@ footer .youtube {
 }
 
 .login-shadow {
-    display: block;
-    transition: 0.5s;
+    position: fixed;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.3);
     z-index: 53;
+    display: block;
+    transition: 0.5s;
+    background-color: rgba(0, 0, 0, 0.3);
     opacity: 1;
-    position: fixed;
 }
 
 @media screen and (max-width: 1439px) {
@@ -1010,9 +1007,9 @@ footer .youtube {
     }
 
     .registration-window {
-        width: auto;
         left: 15px;
         right: 15px;
+        width: auto;
         margin: 0;
     }
 
