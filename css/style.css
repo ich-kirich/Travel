@@ -663,7 +663,7 @@ footer .youtube {
     margin-bottom: 5px;
 }
 
-.registration-window input[type="text"] {
+.registration-window input[type="text"], .registration-window input[type="password"] {
     border: none !important;
     outline: none !important;
     background: #FFFFFF;
@@ -721,13 +721,124 @@ footer .youtube {
     text-shadow: 0px 2px 3px rgb(255 255 255 / 16%);
 }
 
-.registration-window .form-switcher .switcher {
+.registration-window .form-switcher .login-switcher {
     color: #0D606F;
     cursor: pointer;
     text-decoration: underline;
 }
 
 .registration-shadow {
+    display: block;
+    transition: 0.5s;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 53;
+    opacity: 1;
+    position: fixed;
+}
+
+.login-form{
+    display: none;
+}
+
+.login-form.open {
+    display: block;
+}
+
+.login-window {
+    width: 650px;
+    position: fixed;
+    left: 50%;
+    margin-left: -325px;
+    border-radius: 16px;
+    background: linear-gradient(177.09deg, #FFFFFF 6.15%, #0D606F 202.69%);
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    z-index: 55;
+    padding: 25px 45px 23px;
+    text-align: center;
+    transition: 0.5s;
+    top: 50px;
+}
+
+.login-window h4 {
+    font-family: 'Aleo', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    margin: 0 0 30px;
+    color: #0D606F;
+}
+
+.login-window .input-field span{
+    display: block;
+    text-align: left;
+    font-family: 'Aleo', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #0D606F;
+    margin-bottom: 5px;
+}
+
+.login-window button {
+    width: 100%;
+    box-shadow: 0px 0px 3px rgb(13 96 111 / 8%), 0px 2px 3px rgb(13 96 111 / 16%);
+    border-radius: 10px;
+    height: 54px;
+    font-family: 'Red Hat Text', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    margin: 5px 0 10px;
+    border: none;
+    outline: none;
+    background: #0D606F;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 1.5s;
+}
+
+.login-window .input-field input[type="text"], .login-window .input-field input[type="password"] {
+    border: none !important;
+    outline: none !important;
+    background: #FFFFFF;
+    box-shadow: inset 0px 0px 3px rgb(13 96 111 / 8%), inset 0px 2px 3px rgb(13 96 111 / 16%);
+    border-radius: 10px;
+    width: 100%;
+    height: 54px;
+    margin-bottom: 20px;
+    padding-left: 15px;
+}
+
+.login-window hr {
+    margin: 26px 0 20px;
+    border-color: rgba(13, 96, 111, 0.5);
+    border-bottom: none;
+}
+
+.login-window .form-switcher {
+    font-family: 'Aleo', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    color: rgba(13, 96, 111, 0.5);
+    text-shadow: 0px 2px 3px rgb(255 255 255 / 16%);
+}
+
+.login-window .form-switcher .switcher {
+    color: #0D606F;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.login-shadow {
     display: block;
     transition: 0.5s;
     left: 0;
@@ -902,6 +1013,13 @@ footer .youtube {
         width: auto;
         left: 15px;
         right: 15px;
+        margin: 0;
+    }
+
+    .login-window {
+        left: 15px;
+        right: 15px;
+        width: auto;
         margin: 0;
     }
 }

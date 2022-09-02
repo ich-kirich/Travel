@@ -20,7 +20,10 @@ if(registrationLinks.length > 0) {
 
 function registrationOpen(currentRegistration){
     if(currentRegistration && unlock){
-        const registrationActive = document.querySelector('.registration-form.open');
+        const registrationActive = document.querySelector('.login-form.open');
+        if(registrationActive){
+            registrationClose(registrationActive);
+        }
         currentRegistration.classList.add('open'); // добавляется класс "open"
         currentRegistration.addEventListener("click", function (e) {
             if(e.target.closest('.registration-shadow')){

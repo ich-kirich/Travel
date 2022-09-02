@@ -190,18 +190,36 @@
                   </div>
                   <div class="input-field">
                     <span>Password</span>
-                    <input type="text" id="pwd">
+                    <input type="password" id="pwd">
                   </div>
                   <button>Sign Up</button>
                   <a href="#" class="forgott-pass">Forgot Your Password?</a>
                   <hr>
-                  <p class="form-switcher"><span class="text">Don’t have an account?</span> <span class="switcher">Register</span></p>
+                  <p class="form-switcher"><span class="text">Don’t have an account?</span> <a href="login-form" class="login-switcher">Register</a></p>
                 </div>
               </div>
               <div id="registration" class="registration-shadow"></div>
             </div>
         </div>
+        <div id="login-form" class="login-form">
+            <div class="login-window">
+                <h4>Create account</h4>
+                <div class="input-field">
+                    <span>E-mail</span>
+                    <input type="text" id="mail">
+                  </div>
+                  <div class="input-field">
+                    <span>Password</span>
+                    <input type="password" id="pwd">
+                  </div>
+                  <button>Sign Up</button>
+                  <hr>
+                  <p class="form-switcher"><span class="text">Already have an account?</span> <a href="registration-form" class="registration-link switcher">Log in</a></p>
+            </div>
+            <div id="login" class="login-shadow"></div>
+        </div>
         <script src="js/menu.js"></script>
         <script src="js/registration.js"></script>
+        <script src="js/login.js"></script>
     </body>
 </html>
