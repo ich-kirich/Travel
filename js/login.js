@@ -26,6 +26,8 @@ function loginOpen(currentLogin){
         currentLogin.addEventListener("click", function (e) {
             if(e.target.closest('.login-shadow')){
                 loginClose(e.target.closest('.login-form'))
+                prevBtn1.classList.remove('close');
+                nextBtn1.classList.remove('close');
             }
         });
     }

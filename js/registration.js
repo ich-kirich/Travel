@@ -1,6 +1,8 @@
 const registrationLinks = document.querySelectorAll('.registration-link'); // все объекты при нажатии на которые открывается окно
 const body = document.querySelector('body'); // в нем храниться body
 const lockPadding = document.querySelectorAll(".lock-padding");
+const prevBtn1 = document.querySelector('.prev')
+const nextBtn1 = document.querySelector('.next')
 
 let unlock = true;
 
@@ -19,6 +21,8 @@ if(registrationLinks.length > 0) {
 } // проверка на наличие объектов с классом "registration-link"
 
 function registrationOpen(currentRegistration){
+    prevBtn1.classList.add('close');
+    nextBtn1.classList.add('close');
     if(currentRegistration && unlock){
         const registrationActive = document.querySelector('.login-form.open');
         if(registrationActive){
@@ -28,6 +32,8 @@ function registrationOpen(currentRegistration){
         currentRegistration.addEventListener("click", function (e) {
             if(e.target.closest('.registration-shadow')){
                 registrationClose(e.target.closest('.registration-form'))
+                prevBtn1.classList.remove('close');
+                nextBtn1.classList.remove('close');
             }
         });
     }

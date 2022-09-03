@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    scroll-behavior: smooth;
   }
 
 html, body {
@@ -299,6 +300,7 @@ main {
 }
 
 #destinations {
+    position: relative;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -317,6 +319,12 @@ main {
     text-align: center;
 }
 
+#destinations .roulette {
+    position: relative;
+    margin: 0 0 10px;
+    padding: 0;
+}
+
 #destinations .destinations-pictures {
     padding-bottom: 20px;
     margin-top: 6px;
@@ -331,6 +339,16 @@ main {
     overflow: hidden;
     border-radius: 16px;
     line-height: 0em;
+    order: 1;
+}
+
+#destinations .destinations-pictures .left {
+    order: 0;
+}
+
+#destinations .destinations-pictures .right {
+    order: 2;
+
 }
 
 #destinations .destinations-pictures .pictures span {
@@ -344,6 +362,18 @@ main {
     line-height: 42px;
     text-transform: uppercase;
     color: #fff;
+}
+
+#destinations .next {
+    right: 0;
+}
+
+#destinations .prev {
+    left: 0;
+}
+
+#destinations .next img, #destinations .prev img {
+    display: none;
 }
 
 #destinations .pagination {
@@ -365,30 +395,15 @@ main {
     border-radius: 50%;
 }
 
-
-#destinations .roulette-next {
-    display: none;
-}
-
-#destinations .roulette-prev {
-    display: none;
-}
-
 #destinations .scroll-side {
     position: absolute;
     width: calc(100vw - 75%);
-    height: calc(100vw - 95%);
     top: 0;
     bottom: 83px;
     cursor: pointer;
-}
-
-.prev {
-    left: 0;
-}
-
-.next {
-    right: 0;
+    min-height: 100%;
+    z-index: 100;
+    overflow: hidden;
 }
 
 #stories {
@@ -586,6 +601,7 @@ footer .youtube {
 
 .registration-form.open {
     display: block;
+    
 }
 
 .registration-window {
@@ -1627,9 +1643,6 @@ footer .youtube {
         justify-content: flex-start;
         list-style: none;
     }
-    #destinations .destinations-pictures :nth-child(2), #destinations .destinations-pictures :nth-child(3) {
-        display: none;
-    }
 
     #destinations .destinations-pictures .pictures {
         margin: 0;
@@ -1638,6 +1651,20 @@ footer .youtube {
         overflow: hidden;
         position: relative;
         line-height: 0em;
+        left: 0px;
+        transition: 0.5s;
+    }
+
+    #destinations .destinations-pictures .left {
+        position: absolute;
+        left: -800px;
+        transition: 0.5s;
+    }
+
+    #destinations .destinations-pictures .right {
+        position: absolute;
+        left: -1600px;
+        transition: 0.5s;
     }
 
     #destinations .destinations-pictures .pictures img {
@@ -1695,6 +1722,10 @@ footer .youtube {
         left: 25px;
         margin-top: -14px;
         cursor: pointer;
+    }
+
+    #destinations .next.close, #destinations .prev.close{
+        display: none;
     }
 
     #destinations .pagination {
