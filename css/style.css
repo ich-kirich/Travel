@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    scroll-behavior: smooth;
   }
 
 html, body {
@@ -299,6 +300,7 @@ main {
 }
 
 #destinations {
+    position: relative;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -317,6 +319,12 @@ main {
     text-align: center;
 }
 
+#destinations .roulette {
+    position: relative;
+    margin: 0 0 10px;
+    padding: 0;
+}
+
 #destinations .destinations-pictures {
     padding-bottom: 20px;
     margin-top: 6px;
@@ -331,6 +339,16 @@ main {
     overflow: hidden;
     border-radius: 16px;
     line-height: 0em;
+    order: 1;
+}
+
+#destinations .destinations-pictures .left {
+    order: 0;
+}
+
+#destinations .destinations-pictures .right {
+    order: 2;
+
 }
 
 #destinations .destinations-pictures .pictures span {
@@ -346,12 +364,24 @@ main {
     color: #fff;
 }
 
+#destinations .next {
+    right: 0;
+}
+
+#destinations .prev {
+    left: 0;
+}
+
+#destinations .next img, #destinations .prev img {
+    display: none;
+}
+
 #destinations .pagination {
     display: flex;
     gap: 10px;
     justify-content: center;
 }
-#destinations .pagination .point-no-choose {
+#destinations .pagination div {
     width: 20px;
     height: 20px;
     background: rgba(242, 120, 92, 0.5);
@@ -365,13 +395,15 @@ main {
     border-radius: 50%;
 }
 
-
-#destinations .roulette-next {
-    display: none;
-}
-
-#destinations .roulette-prev {
-    display: none;
+#destinations .scroll-side {
+    position: absolute;
+    width: calc(100vw - 75%);
+    top: 0;
+    bottom: 83px;
+    cursor: pointer;
+    min-height: 100%;
+    z-index: 100;
+    overflow: hidden;
 }
 
 #stories {
@@ -562,6 +594,293 @@ footer .youtube {
     margin-top: 2px;
 }
 
+.registration-form{
+    display: none;
+    overflow: hidden;
+}
+
+.registration-form.open {
+    display: block;
+    
+}
+
+.registration-window {
+    position: absolute;
+    left: 50%;
+    top: 50px;
+    z-index: 55;
+    width: 650px;
+    margin-left: -325px;
+    border-radius: 16px;
+    background: linear-gradient(177.09deg, #FFFFFF 6.15%, #0D606F 202.69%);
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    padding: 25px 45px 23px;
+    text-align: center;
+}
+
+.registration-window h4 {
+    margin: 0 0 30px;
+    font-family: 'Aleo', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    color: #0D606F;
+}
+
+.registration-window .social-login .facebook {
+    background: #1877F2;
+    color: #fff;
+}
+.registration-window .social-login a {
+    position: relative;
+    display: block;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 3px rgb(13 96 111 / 8%), 0px 2px 3px rgb(13 96 111 / 16%);
+    font-family: 'Red Hat Text', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 56px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.registration-window .devider {
+    margin: 0 0 10px;
+}
+
+.registration-window .devider span {
+    position: relative;
+    font-family: 'Aleo', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: rgba(13, 96, 111, 0.5);
+}
+
+.registration-window .devider span::before {
+    left: -500px;
+    right: 150%;
+}
+
+.registration-window .devider span::after {
+    left: 150%;
+    right: -500px;
+}
+
+.registration-window .devider span::before, .registration-window .devider span::after {
+    position: absolute;
+    top: 50%;
+    display: block;
+    height: 1px;
+    content: "";
+    background-color: rgba(13, 96, 111, 0.5);
+}
+
+.registration-window .input-field span {
+    margin-bottom: 5px;
+    display: block;
+    text-align: left;
+    font-family: 'Aleo', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #0D606F;
+}
+
+.registration-window input[type="text"], .registration-window input[type="password"] {
+    width: 100%;
+    height: 54px;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    border: none !important;
+    outline: none !important;
+    background: #FFFFFF;
+    box-shadow: inset 0px 0px 3px rgb(13 96 111 / 8%), inset 0px 2px 3px rgb(13 96 111 / 16%);
+    border-radius: 10px;
+}
+
+.registration-window button {
+    width: 100%;
+    height: 54px;
+    margin: 5px 0 10px;
+    box-shadow: 0px 0px 3px rgb(13 96 111 / 8%), 0px 2px 3px rgb(13 96 111 / 16%);
+    border-radius: 10px;
+    font-family: 'Red Hat Text', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    border: none;
+    outline: none;
+    background: #0D606F;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 1.5s;
+}
+
+.registration-window button:hover, .login-window button:hover {
+    background-color: #05262c;
+}
+
+.registration-window .forgott-pass {
+    font-family: 'Aleo', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    text-decoration-line: underline;
+    color: #0D606F;
+    text-shadow: 0px 2px 3px rgb(255 255 255 / 16%);
+}
+
+.registration-window hr {
+    margin: 26px 0 20px;
+    border-color: rgba(13, 96, 111, 0.5);
+    border-bottom: none;
+}
+
+.registration-window .form-switcher {
+    font-family: 'Aleo', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    color: rgba(13, 96, 111, 0.5);
+    text-shadow: 0px 2px 3px rgb(255 255 255 / 16%);
+}
+
+.registration-window .form-switcher .login-switcher {
+    color: #0D606F;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.registration-shadow {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 53;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 1;
+}
+
+.login-form{
+    display: none;
+}
+
+.login-form.open {
+    display: block;
+}
+
+.login-window {
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    z-index: 55;
+    margin-left: -325px;
+    padding: 25px 45px 23px;
+    width: 650px;
+    border-radius: 16px;
+    background: linear-gradient(177.09deg, #FFFFFF 6.15%, #0D606F 202.69%);
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    text-align: center;
+}
+
+.login-window h4 {
+    font-family: 'Aleo', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    margin: 0 0 30px;
+    color: #0D606F;
+}
+
+.login-window .input-field span{
+    margin-bottom: 5px;
+    display: block;
+    text-align: left;
+    font-family: 'Aleo', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #0D606F;
+}
+
+.login-window button {
+    width: 100%;
+    margin: 5px 0 10px;
+    height: 54px;
+    box-shadow: 0px 0px 3px rgb(13 96 111 / 8%), 0px 2px 3px rgb(13 96 111 / 16%);
+    border-radius: 10px;
+    font-family: 'Red Hat Text', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    border: none;
+    outline: none;
+    background: #0D606F;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 1.5s;
+}
+
+.login-window .input-field input[type="text"], .login-window .input-field input[type="password"] {
+    width: 100%;
+    height: 54px;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    border: none !important;
+    outline: none !important;
+    background: #FFFFFF;
+    box-shadow: inset 0px 0px 3px rgb(13 96 111 / 8%), inset 0px 2px 3px rgb(13 96 111 / 16%);
+    border-radius: 10px;
+}
+
+.login-window hr {
+    margin: 26px 0 20px;
+    border-color: rgba(13, 96, 111, 0.5);
+    border-bottom: none;
+}
+
+.login-window .form-switcher {
+    font-family: 'Aleo', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    color: rgba(13, 96, 111, 0.5);
+    text-shadow: 0px 2px 3px rgb(255 255 255 / 16%);
+}
+
+.login-window .form-switcher .switcher {
+    color: #0D606F;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.login-shadow {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 53;
+    display: block;
+    transition: 0.5s;
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 1;
+}
+
 @media screen and (max-width: 1439px) {
     html, body {
         min-width: auto;
@@ -718,6 +1037,20 @@ footer .youtube {
 
     #stories .story .text {
         width: auto;
+    }
+
+    .registration-window {
+        left: 15px;
+        right: 15px;
+        width: auto;
+        margin: 0;
+    }
+
+    .login-window {
+        left: 15px;
+        right: 15px;
+        width: auto;
+        margin: 0;
     }
 }
 
@@ -1310,9 +1643,6 @@ footer .youtube {
         justify-content: flex-start;
         list-style: none;
     }
-    #destinations .destinations-pictures :nth-child(2), #destinations .destinations-pictures :nth-child(3) {
-        display: none;
-    }
 
     #destinations .destinations-pictures .pictures {
         margin: 0;
@@ -1321,11 +1651,25 @@ footer .youtube {
         overflow: hidden;
         position: relative;
         line-height: 0em;
+        left: 0px;
+        transition: 0.5s;
+    }
+
+    #destinations .destinations-pictures .left {
+        position: absolute;
+        left: -800px;
+        transition: 0.5s;
+    }
+
+    #destinations .destinations-pictures .right {
+        position: absolute;
+        left: -1600px;
+        transition: 0.5s;
     }
 
     #destinations .destinations-pictures .pictures img {
         max-width: 100%;
-        content: url(../img/spain-mobile.jpg);
+        aspect-ratio: 16 / 9;
     }
     
     #destinations .destinations-pictures .pictures :nth-child(2) {
@@ -1342,30 +1686,46 @@ footer .youtube {
         color: #fff;
     }
 
-    #destinations .roulette-next {
+    #destinations .next {
         display: block;
     }
 
-    #destinations .roulette-prev {
+    #destinations .prev {
         display: block;
     }
 
-    #destinations .roulette-next img {
+    .scroll-side {
+        cursor: auto;
+        height: auto;
+    }
+
+    .scroll-side {
+        bottom: 0;
+    }
+    .next {
+        right: 0;
+    }
+
+    #destinations .next img {
         position: absolute;
         right: 25px;
-        top: 59%;
+        top: 50%;
         margin-top: -14px;
         display: block;
         cursor: pointer;
     }
 
-    #destinations .roulette-prev img {
+    #destinations .prev img {
         position: absolute;
         display: block;
-        top: 59%;
+        top: 50%;
         left: 25px;
         margin-top: -14px;
         cursor: pointer;
+    }
+
+    #destinations .next.close, #destinations .prev.close{
+        display: none;
     }
 
     #destinations .pagination {
@@ -1379,7 +1739,7 @@ footer .youtube {
         list-style: none;
     }
 
-    #destinations .pagination .point-no-choose {
+    #destinations .pagination div {
         width: 8px;
         height: 8px;
     }
@@ -1553,4 +1913,3 @@ footer .youtube {
         margin: 0 auto;
     }
 }
-

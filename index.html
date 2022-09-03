@@ -23,15 +23,15 @@
                         <li><a href="#steps">Plan Your Trip</a></li>
                         <li><a href="#destinations">Destinations</a></li>
                         <li><a href="#stories">Travel Stories</a></li>
-                        <li class="account"><a href="#media">Account</a></li>
+                        <li class="account"><a href="#registration-form" class="registration-link">Account</a></li>
                         <li class="socia-media"><a href="#media">Social Media</a></li>
                         <li class="show-adaptive close"><img src="img/close-menu.svg" alt="close"></li>
                     </ul>
                 </nav>
                 <div class="big-shadow"></div>
-                <div class="login">
+                <a class="login registration-link" href="#registration-form">
                     <button>Login</button>
-                </div>
+                </a>
                 <div id="nav-toggle">
                     <span></span>
                     <span></span>
@@ -73,31 +73,31 @@
             </section>
             <section id="destinations">
                 <h2>POPULAR DESTINATIONS</h2>
+                <div class="scroll-side next">
+                    <img src="img/button-next.svg" alt="next">
+                </div>
+                <div class="scroll-side prev">
+                    <img src="img/button-prev.svg" alt="prev">
+                </div>
                 <div class="roulette">
                     <div class="destinations-pictures">
                         <div class="pictures">
-                            <img src="img/ocean.jpg" alt="spain">
-                            <span>SPAIN</span>
+                            <div class="img"><img src="img/ocean.jpg" alt="spain"></div>
+                            <span class="name">SPAIN</span>
                         </div>
-                        <div class="pictures">
-                            <img src="img/japan.jpg" alt="japan">
+                        <div class="pictures left">
+                            <div class="img"><img src="img/japan.jpg" alt="japan"></div>
                             <span>JAPAN</span>
                         </div>
-                        <div class="pictures">
-                            <img src="img/bridge.jpg" alt="bridge">
+                        <div class="pictures right">
+                            <div class="img"><img src="img/bridge.jpg" alt="bridge"></div>
                             <span>USA</span>
                         </div>
                     </div>
-                    <div class="roulette-next">
-                        <img src="img/button-next.svg" alt="next">
-                    </div>
-                    <div class="roulette-prev">
-                        <img src="img/button-prev.svg" alt="prev">
-                    </div>
                     <div class="pagination">
-                        <div class="point-no-choose"></div>
                         <div class="point-choose"></div>
-                        <div class="point-no-choose"></div>
+                        <div class></div>
+                        <div class></div>
                     </div>
                 </div>
                 <div class="find-more">
@@ -175,6 +175,52 @@
                 </ul>
             </div>
         </footer>
+        <div id="registration-form" class="registration-form">
+            <div class="registration-window">
+                <div class="registration">
+                  <h4>Log in to your account</h4>
+                  <div class="social-login">
+                    <a href="#" class="facebook"><img src="img/facebook.svg" alt="Facebook"> Sign In with Facebook</a>
+                    <a href="#" class="gmail"><img src="img/gmail.svg" alt="Google">Sign In with Google</a>
+                  </div>
+                  <p class="devider"><span>or</span></p>
+                  <div class="input-field">
+                    <span>E-mail</span>
+                    <input type="text" id="mail">
+                  </div>
+                  <div class="input-field">
+                    <span>Password</span>
+                    <input type="password" id="pwd">
+                  </div>
+                  <button>Sign Up</button>
+                  <a href="#" class="forgott-pass">Forgot Your Password?</a>
+                  <hr>
+                  <p class="form-switcher"><span class="text">Don’t have an account?</span> <a href="login-form" class="login-switcher">Register</a></p>
+                </div>
+              </div>
+              <div id="registration" class="registration-shadow"></div>
+            </div>
+        </div>
+        <div id="login-form" class="login-form">
+            <div class="login-window">
+                <h4>Create account</h4>
+                <div class="input-field">
+                    <span>E-mail</span>
+                    <input type="text" id="mail">
+                  </div>
+                  <div class="input-field">
+                    <span>Password</span>
+                    <input type="password" id="pwd">
+                  </div>
+                  <button>Sign Up</button>
+                  <hr>
+                  <p class="form-switcher"><span class="text">Already have an account?</span> <a href="registration-form" class="registration-link switcher">Log in</a></p>
+            </div>
+            <div id="login" class="login-shadow"></div>
+        </div>
         <script src="js/menu.js"></script>
+        <script src="js/registration.js"></script>
+        <script src="js/login.js"></script>
+        <script src="js/endless_slider.js"></script>
     </body>
 </html>
